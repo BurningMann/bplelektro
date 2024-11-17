@@ -1,0 +1,91 @@
+// breakpoints
+$xs: 375px;
+$sm: 576px;
+$md: 780px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1440px;
+
+@mixin Header-H1($weight) {
+  font-size: 64px;
+  font-weight: $weight;
+  line-height: 70.4px;
+}
+
+@mixin Header-H2($weight) {
+  font-size: 56px;
+  font-weight: $weight;
+  line-height: 61.6px;
+}
+
+@mixin Header-H3($weight) {
+  font-size: 48px;
+  font-weight: $weight;
+  line-height: 52.8px;
+}
+
+@mixin Header-H4($weight) {
+  font-size: 42px;
+  font-weight: $weight;
+  line-height: 46.2px;
+}
+
+@mixin Header-H5($weight) {
+  font-size: 36px;
+  font-weight: $weight;
+  line-height: 39.6px;
+}
+
+@mixin Header-H6($weight) {
+  font-size: 32px;
+  font-weight: $weight;
+  line-height: 35.2px;
+}
+
+@mixin Sub-24($weight) {
+  font-size: 24px;
+  font-weight: $weight;
+  line-height: 28.8px;
+}
+
+@mixin Sub-20($weight) {
+  font-size: 20px;
+  font-weight: $weight;
+  line-height: 22px;
+}
+
+@mixin Sub-18($weight) {
+  font-size: 18px;
+  font-weight: $weight;
+  line-height: 21.6px;
+}
+
+@mixin Base-16($weight) {
+  font-size: 16px;
+  font-weight: $weight;
+  line-height: 22.4px;
+}
+
+@mixin Base-14($weight) {
+  font-size: 14px;
+  font-weight: $weight;
+  line-height: 15.4px;
+}
+
+@mixin Base-12($weight) {
+  font-size: 12px;
+  font-weight: $weight;
+  line-height: 18px;
+}
+
+@mixin Base-11($weight) {
+  font-size: 11px;
+  font-weight: $weight;
+  line-height: 15.4px;
+}
+
+@mixin Base-10($weight) {
+  font-size: 10px;
+  font-weight: $weight;
+  line-height: 14px;
+}
