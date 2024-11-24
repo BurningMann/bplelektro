@@ -1,308 +1,380 @@
-<header class="header container">
-  <div>
-    <div class="header__top netbook-hidden">
-      <div class="header__top-left">
-        <a href="/" class="header__logo"><img src="./img/header-logo.png" alt="" /></a>
-        <div class="header__top-box">
-          <a href="#" class="header__text-item">Мастерам</a>
-          <a href="#" class="header__text-item">Архитекторам / Дизайнерам</a>
-        </div>
-        <div class="header__top-box">
-          <a href="#" class="header__text-item">Застройщикам</a>
-          <a href="#" class="header__text-item">Частному покупателю</a>
-        </div>
+<header class="header">
+  <div class="header-wr">
+    <div class="header-top container-padding">
+      <div class="headert-top__left">
+        <nav class="header-nav">
+          <div class="header-nav-item">
+            <a href="/" class="header-nav-item__link">
+              О компании
+              <div class="header-nav-item__link-arrow">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="9" height="9" transform="translate(0 0.5)" fill="white" />
+                  <path d="M2 3.5L5 6.5L8 3.5" stroke="#9F9F9F" />
+                </svg>
+              </div>
+            </a>
+            <div class="header-nav-item__dropdown">
+              <a href="#" class="header-nav-item__dropdown-item">link 1</a>
+              <a href="#" class="header-nav-item__dropdown-item">link 1</a>
+              <a href="#" class="header-nav-item__dropdown-item">link 1</a>
+              <a href="#" class="header-nav-item__dropdown-item">link 1</a>
+            </div>
+          </div>
+          <div class="header-nav-item">
+            <a href="/" class="header-nav-item__link">
+              Покупателю
+              <div class="header-nav-item__link-arrow">
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="9" height="9" transform="translate(0 0.5)" fill="white" />
+                  <path d="M2 3.5L5 6.5L8 3.5" stroke="#9F9F9F" />
+                </svg>
+              </div>
+            </a>
+            <div class="header-nav-item__dropdown">
+              <a href="#" class="header-nav-item__dropdown-item">link 1</a>
+              <a href="#" class="header-nav-item__dropdown-item">link 1</a>
+              <a href="#" class="header-nav-item__dropdown-item">link 1</a>
+              <a href="#" class="header-nav-item__dropdown-item">link 1</a>
+            </div>
+          </div>
+          <div class="header-nav-item">
+            <a href="/" class="header-nav-item__link"> Для бизнеса </a>
+          </div>
+          <div class="header-nav-item">
+            <a href="/" class="header-nav-item__link"> Новости </a>
+          </div>
+          <div class="header-nav-item">
+            <a href="/" class="header-nav-item__link"> Акции </a>
+          </div>
+          <div class="header-nav-item">
+            <a href="/" class="header-nav-item__link"> Контакты </a>
+          </div>
+        </nav>
       </div>
-      <div class="header__top-right">
-        <div class="header__top-box js-search-hidden">
-          <a href="tel:8 (800) 600-58-34" class="header__text-item no-hover">8 (800) 600-58-34</a>
-          <span class="header__text-item no-hover">Москва, ул. Авангардная, д. 3, пом.2, оф. 304</span>
+      <div class="headert-top__right">
+        <div class="headert-top__contacts">
+          <a href="tel:+375 29 18 18 580" class="headert-top__contacts-item">
+            <span class="headert-top__contacts-item-label">Оптовый отдел:</span>
+            <span class="headert-top__contacts-item-link">+375 29 18 18 580</span>
+          </a>
+          <a href="tel:+375 29 11 44 853" class="headert-top__contacts-item">
+            <span class="headert-top__contacts-item-label">Розничный магазин:</span>
+            <span class="headert-top__contacts-item-link">+375 29 11 44 853</span>
+          </a>
         </div>
-        <div class="header__search">
-          <form action="#">
-            <input type="text" class="header__search-input" />
-            <button type="submit" class="header__search-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="8.5" stroke="white" />
-                <path d="M18 18L21 21" stroke="white" stroke-linecap="round" />
-              </svg>
-            </button>
-          </form>
-        </div>
-        <div class="button is-white">Задать вопрос</div>
+        <div class="headert-top__callback-btn" data-popup="callback">Заказать звонок</div>
       </div>
     </div>
-    <div class="mobile-header netbook-visible">
-      <div class="mobile-header__left">
-        <a href="/" class="mobile-header__logo"><img src="./img/header-logo.png" alt="" /></a>
-      </div>
-      <div class="mobile-header__right">
-        <!-- <a href="tel:">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M21 17.697C21 18.021 20.9279 18.354 20.7747 18.678C20.6214 19.002 20.4231 19.308 20.1617 19.596C19.7201 20.082 19.2334 20.433 18.6835 20.658C18.1427 20.883 17.5568 21 16.9259 21C16.0065 21 15.024 20.784 13.9875 20.343C12.9509 19.902 11.9144 19.308 10.8868 18.561C9.85028 17.805 8.8678 16.968 7.9304 16.041C7.002 15.105 6.16375 14.124 5.41562 13.098C4.67651 12.072 4.08162 11.046 3.64897 10.029C3.21632 9.003 3 8.022 3 7.086C3 6.474 3.10816 5.889 3.32449 5.349C3.54081 4.8 3.88333 4.296 4.36104 3.846C4.93791 3.279 5.56885 3 6.23585 3C6.48823 3 6.74061 3.054 6.96595 3.162C7.2003 3.27 7.40761 3.432 7.56986 3.666L9.66099 6.609C9.82324 6.834 9.94041 7.041 10.0215 7.239C10.1027 7.428 10.1477 7.617 10.1477 7.788C10.1477 8.004 10.0846 8.22 9.95844 8.427C9.84126 8.634 9.67001 8.85 9.45368 9.066L8.76865 9.777C8.6695 9.876 8.62444 9.993 8.62444 10.137C8.62444 10.209 8.63345 10.272 8.65148 10.344C8.67852 10.416 8.70556 10.47 8.72359 10.524C8.88583 10.821 9.16525 11.208 9.56184 11.676C9.96745 12.144 10.4001 12.621 10.8688 13.098C11.3555 13.575 11.8242 14.016 12.302 14.421C12.7707 14.817 13.1582 15.087 13.4647 15.249C13.5098 15.267 13.5638 15.294 13.6269 15.321C13.699 15.348 13.7712 15.357 13.8523 15.357C14.0055 15.357 14.1227 15.303 14.2218 15.204L14.9069 14.529C15.1322 14.304 15.3485 14.133 15.5558 14.025C15.7631 13.899 15.9705 13.836 16.1958 13.836C16.3671 13.836 16.5473 13.872 16.7456 13.953C16.9439 14.034 17.1512 14.151 17.3766 14.304L20.36 16.419C20.5944 16.581 20.7566 16.77 20.8558 16.995C20.9459 17.22 21 17.445 21 17.697Z"
-              stroke="#292D32"
-              stroke-miterlimit="10"
-            />
+    <div class="header-main container-padding">
+      <div class="header-main__left">
+        <div class="header-burger netbook-visible">
+          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 2H17M1 8H17M1 14H17" stroke="#114335" stroke-width="2" stroke-linecap="round" />
           </svg>
-        </a> -->
-        <a href="#" class="header-search">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="8.5" stroke="#1C1D1B" />
-            <path d="M18 18L21 21" stroke="#1C1D1B" stroke-linecap="round" />
-          </svg>
-        </a>
-        <div class="header-burger">
-          <div class="header-burger__line"></div>
-          <div class="header-burger__line"></div>
-          <div class="header-burger__line"></div>
-          <div class="header-burger__line"></div>
         </div>
-        <!-- <div class="mobile-header__button">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="/" class="hrader-logo">
+          <img src="./img/header-logo.png" alt="" />
+        </a>
+        <div class="header-catalog-btn netbook-hidden">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M5.66634 12.6666H5.33301C2.66634 12.6666 1.33301 11.9999 1.33301 8.66659V5.33325C1.33301 2.66659 2.66634 1.33325 5.33301 1.33325H10.6663C13.333 1.33325 14.6663 2.66659 14.6663 5.33325V8.66659C14.6663 11.3333 13.333 12.6666 10.6663 12.6666H10.333C10.1263 12.6666 9.92634 12.7666 9.79967 12.9333L8.79967 14.2666C8.35967 14.8533 7.63967 14.8533 7.19967 14.2666L6.19967 12.9333C6.09301 12.7866 5.84634 12.6666 5.66634 12.6666Z"
-              stroke="#292D32"
-              stroke-miterlimit="10"
+              d="M6.7498 6.74995H7.2498M6.7498 7.24995H7.2498M6.7498 2.08328H7.2498M6.7498 2.58328H7.2498M6.7498 11.4166H7.2498M6.7498 11.9166H7.2498M2.08313 6.74995H2.58313M2.08313 7.24995H2.58313M2.08313 2.08328H2.58313M2.08313 2.58328H2.58313M2.08313 11.4166H2.58313M2.08313 11.9166H2.58313M11.4165 6.74995H11.9165M11.4165 7.24995H11.9165M11.4165 2.08328H11.9165M11.4165 2.58328H11.9165M11.4165 11.4166H11.9165M11.4165 11.9166H11.9165M7.66663 6.99999C7.66663 7.36818 7.36815 7.66666 6.99996 7.66666C6.63177 7.66666 6.33329 7.36818 6.33329 6.99999C6.33329 6.6318 6.63177 6.33332 6.99996 6.33332C7.36815 6.33332 7.66663 6.6318 7.66663 6.99999ZM7.66663 2.33332C7.66663 2.70151 7.36815 2.99999 6.99996 2.99999C6.63177 2.99999 6.33329 2.70151 6.33329 2.33332C6.33329 1.96513 6.63177 1.66666 6.99996 1.66666C7.36815 1.66666 7.66663 1.96513 7.66663 2.33332ZM7.66663 11.6667C7.66663 12.0348 7.36815 12.3333 6.99996 12.3333C6.63177 12.3333 6.33329 12.0348 6.33329 11.6667C6.33329 11.2985 6.63177 11 6.99996 11C7.36815 11 7.66663 11.2985 7.66663 11.6667ZM2.99996 6.99999C2.99996 7.36818 2.70148 7.66666 2.33329 7.66666C1.9651 7.66666 1.66663 7.36818 1.66663 6.99999C1.66663 6.6318 1.9651 6.33332 2.33329 6.33332C2.70148 6.33332 2.99996 6.6318 2.99996 6.99999ZM2.99996 2.33332C2.99996 2.70151 2.70148 2.99999 2.33329 2.99999C1.9651 2.99999 1.66663 2.70151 1.66663 2.33332C1.66663 1.96513 1.9651 1.66666 2.33329 1.66666C2.70148 1.66666 2.99996 1.96513 2.99996 2.33332ZM2.99996 11.6667C2.99996 12.0348 2.70148 12.3333 2.33329 12.3333C1.9651 12.3333 1.66663 12.0348 1.66663 11.6667C1.66663 11.2985 1.9651 11 2.33329 11C2.70148 11 2.99996 11.2985 2.99996 11.6667ZM12.3333 6.99999C12.3333 7.36818 12.0348 7.66666 11.6666 7.66666C11.2984 7.66666 11 7.36818 11 6.99999C11 6.6318 11.2984 6.33332 11.6666 6.33332C12.0348 6.33332 12.3333 6.6318 12.3333 6.99999ZM12.3333 2.33332C12.3333 2.70151 12.0348 2.99999 11.6666 2.99999C11.2984 2.99999 11 2.70151 11 2.33332C11 1.96513 11.2984 1.66666 11.6666 1.66666C12.0348 1.66666 12.3333 1.96513 12.3333 2.33332ZM12.3333 11.6667C12.3333 12.0348 12.0348 12.3333 11.6666 12.3333C11.2984 12.3333 11 12.0348 11 11.6667C11 11.2985 11.2984 11 11.6666 11C12.0348 11 12.3333 11.2985 12.3333 11.6667Z"
+              stroke="white"
+              stroke-width="2"
               stroke-linecap="round"
-              stroke-linejoin="round"
             />
-            <path d="M4.66699 5.33325H11.3337" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4.66699 8.66675H8.66699" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-        </div> -->
-      </div>
-    </div>
-    <div class="header__nav">
-      <a href="/" class="header__nav-logo netbook-hidden"><img src="./img/header-logo-min.png" alt="" /></a>
-      <div class="header__nav-item is-catalog">
-        <a href="#" class="header__nav-item-link">
-          <span class="header__nav-item-catalog-icon netbook-hidden">
-            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 1H16" stroke="white" stroke-width="2" />
-              <path d="M0 6H16" stroke="white" stroke-width="2" />
-              <path d="M0 11H16" stroke="white" stroke-width="2" />
-            </svg>
-          </span>
-          Продукция
-          <span class="header__nav-item-arrow netbook-visible">
-            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" />
-            </svg>
-          </span>
-        </a>
-        <div class="header-catalog">
-          <div class="header-catalog__col">
-            <div class="header-catalog__col-item is-active">
-              <a href="#" class="header-catalog__col-item-link">
-                фасады
-                <span class="is-back-arrow netbook-visible">
-                  <svg width="1rem" height=".7rem" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L5 5L9 1" stroke="#1c1d1b" stroke-width="2"></path>
-                  </svg>
-                </span>
-              </a>
-              <div class="header-catalog__submenu">
-                <div class="header-catalog__submenu-list">
-                  <a href="#">Краски для наружных работ</a>
-                  <a href="#">Эмали</a>
-                  <a href="#">Краски для внутренних работ</a>
-                  <a href="#">Лаки</a>
-                  <a href="#">Грунтовки</a>
-                  <a href="#">Лессировки</a>
-                  <a href="#">Штукатурки и покрытия</a>
-                  <a href="#">Масла</a>
-                  <a href="#">Клеяще-армирующие смеси</a>
-                  <a href="#">Разбавители</a>
-                  <a href="#">Шпатлевки</a>
-                  <a href="#">Пасты для колеровки</a>
-                  <a href="#">Декоративные материалы</a>
-                </div>
-                <div>
-                  <a href="#" class="more-link">
-                    <span class="is-title">скачать прайс-лист</span>
-                    <div class="more-link__arrow">
-                      <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 0L6 8" stroke="black" />
-                        <path d="M1 4L6 8L11 4" stroke="black" />
-                        <path d="M1 10H11" stroke="black" />
-                      </svg>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="header-catalog__col-item">
-              <a href="#" class="header-catalog__col-item-link">
-                ИНТЕРЬЕРЫ
-                <span class="is-back-arrow netbook-visible">
-                  <svg width="1rem" height=".7rem" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L5 5L9 1" stroke="#1c1d1b" stroke-width="2"></path>
-                  </svg>
-                </span>
-              </a>
-              <div class="header-catalog__submenu">
-                <div class="header-catalog__submenu-list">
-                  <a href="#">Пункт меню</a>
-                  <a href="#">Пункт меню</a>
-                  <a href="#">Пункт меню</a>
-                  <a href="#">Пункт меню</a>
-                  <a href="#">Пункт меню</a>
-                  <a href="#">Пункт меню</a>
-                </div>
-                <div>
-                  <a href="#" class="more-link">
-                    <span class="is-title">скачать прайс-лист</span>
-                    <div class="more-link__arrow">
-                      <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 0L6 8" stroke="black" />
-                        <path d="M1 4L6 8L11 4" stroke="black" />
-                        <path d="M1 10H11" stroke="black" />
-                      </svg>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="header-catalog__col-item">
-              <a href="#" class="header-catalog__col-item-link">
-                ДЕКОРАТИВНЫЕ ТЕХНИКИ
-                <span class="is-back-arrow netbook-visible">
-                  <svg width="1rem" height=".7rem" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L5 5L9 1" stroke="#1c1d1b" stroke-width="2"></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-            <div class="header-catalog__col-item">
-              <a href="#" class="header-catalog__col-item-link">
-                СИСТЕМЫ УТЕПЛЕНИЯ
-                <span class="is-back-arrow netbook-visible">
-                  <svg width="1rem" height=".7rem" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L5 5L9 1" stroke="#1c1d1b" stroke-width="2"></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-            <div class="header-catalog__col-item">
-              <a href="#" class="header-catalog__col-item-link">
-                ЗАЩИТА ДЕРЕВА
-                <span class="is-back-arrow netbook-visible">
-                  <svg width="1rem" height=".7rem" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L5 5L9 1" stroke="#1c1d1b" stroke-width="2"></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-            <div class="header-catalog__col-item">
-              <a href="#" class="header-catalog__col-item-link">
-                ЗАЩИТА МЕТАЛЛА
-                <span class="is-back-arrow netbook-visible">
-                  <svg width="1rem" height=".7rem" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L5 5L9 1" stroke="#1c1d1b" stroke-width="2"></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
+          Каталог продукции
         </div>
-      </div>
-      <div class="header__nav-item is-parrent">
-        <a href="#" class="header__nav-item-link">
-          Системы и решения
-          <span class="header__nav-item-arrow">
-            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" />
+
+        <form action="#" class="header-search">
+          <input type="text" class="header-search__input" placeholder="Поиск по названию или артикулу" />
+          <button class="header-search__button">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.4668 16.4667L12.2001 12.2M7.93345 14.3333C4.39883 14.3333 1.53345 11.4679 1.53345 7.93333C1.53345 4.3987 4.39883 1.53333 7.93345 1.53333C11.4681 1.53333 14.3334 4.3987 14.3334 7.93333C14.3334 11.4679 11.4681 14.3333 7.93345 14.3333Z"
+                stroke="#114335"
+                stroke-width="2"
+              />
             </svg>
-          </span>
-        </a>
-        <div class="header__nav-item-drop">
-          <div class="header__nav-item-drop-inner">
-            <a href="#">Пункт меню</a>
-            <a href="#">Пункт меню</a>
-            <a href="#">Пункт меню</a>
-            <a href="#">Пункт меню</a>
-          </div>
-        </div>
-      </div>
-      <div class="header__nav-item">
-        <a href="#" class="header__nav-item-link"> Объекты </a>
-      </div>
-      <div class="header__nav-item">
-        <a href="#" class="header__nav-item-link"> Загрузки и документы </a>
-      </div>
-      <div class="header__nav-item is-parrent">
-        <a href="#" class="header__nav-item-link">
-          Сервисы
-          <span class="header__nav-item-arrow">
-            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" />
-            </svg>
-          </span>
-        </a>
-        <div class="header__nav-item-drop">
-          <div class="header__nav-item-drop-inner">
-            <a href="#">Компьютерная колеровка</a>
-            <a href="#">Заказ веера, образцов, консультации</a>
-            <a href="#">Пункт меню</a>
-            <a href="#">Пункт меню</a>
-          </div>
-        </div>
-      </div>
-      <div class="header__nav-item is-parrent">
-        <a href="#" class="header__nav-item-link">
-          О компании LINNIMAX
-          <span class="header__nav-item-arrow">
-            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" />
-            </svg>
-          </span>
-        </a>
-        <div class="header__nav-item-drop">
-          <div class="header__nav-item-drop-inner">
-            <a href="#">История</a>
-            <a href="#">Миссия, ценности, компетенции</a>
-            <a href="#">Пункт меню</a>
-            <a href="#">Пункт меню</a>
-          </div>
-        </div>
-      </div>
-      <div class="header__nav-item">
-        <a href="#" class="header__nav-item-link"> Где купить </a>
-      </div>
-      <div class="header__nav-right netbook-hidden">
-        <a href="#" class="header__search">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="8.5" stroke="#1c1d1b" />
-            <path d="M18 18L21 21" stroke="#1c1d1b" stroke-linecap="round" />
-          </svg>
-        </a>
-        <div class="button is-black">Задать вопрос</div>
+          </button>
+        </form>
       </div>
 
-      <div class="header__top-box netbook-visible">
-        <a href="#" class="header__text-item">Мастерам</a>
-        <a href="#" class="header__text-item">Архитекторам / Дизайнерам</a>
-        <a href="#" class="header__text-item">Застройщикам</a>
-        <a href="#" class="header__text-item">Частному покупателю</a>
-      </div>
-      <div class="header__top-box netbook-visible">
-        <a href="tel:8 (800) 600-58-34" class="header__text-item">8 (800) 600-58-34</a>
-        <span class="header__text-item">Москва, ул. Авангардная, д. 3, пом.2, оф. 304</span>
-      </div>
-      <div class="header__top-box netbook-visible">
-        <a href="#" class="button is-primary is-tiny">Задать вопрос</a>
+      <div class="header-main__right netbook-hidden">
+        <div class="header-main__nav-buttons">
+          <a href="#" class="header-main__nav-button">
+            <div class="header-main__nav-button-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_96_1349)">
+                  <path
+                    d="M13 8.5L13 16M8 -2.18557e-07L8 16M3 7L3 16"
+                    stroke="#114335"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_96_1349">
+                    <rect width="16" height="16" fill="white" transform="translate(16) rotate(90)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="header-main__nav-button-counter">7</div>
+            </div>
+            <div class="header-main__nav-button-name">Сравнение</div>
+          </a>
+          <a href="#" class="header-main__nav-button">
+            <div class="header-main__nav-button-icon">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.3666 1.23978e-05L2.6333 0V15.4667C2.6333 15.6717 2.75082 15.8586 2.9356 15.9474C3.12038 16.0362 3.33971 16.0112 3.4998 15.8831L8.49997 11.883L13.5001 15.8831C13.6602 16.0112 13.8796 16.0362 14.0643 15.9474C14.2491 15.8586 14.3666 15.6717 14.3666 15.4667V1.23978e-05Z"
+                  fill="#114335"
+                />
+              </svg>
+              <div class="header-main__nav-button-counter">34</div>
+            </div>
+            <div class="header-main__nav-button-name">Избранное</div>
+          </a>
+          <a href="#" class="header-main__nav-button">
+            <div class="header-main__nav-button-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.99997 0C5.93828 0 4.26663 1.67005 4.26663 3.73125C4.26663 5.79244 5.93828 7.46249 7.99997 7.46249C10.0617 7.46249 11.7333 5.79244 11.7333 3.73125C11.7333 1.67005 10.0617 0 7.99997 0Z"
+                  fill="#114335"
+                />
+                <path
+                  d="M5.86663 9.59375C3.80489 9.59375 2.1333 11.2646 2.1333 13.3265V15.9903H13.8666V13.3265C13.8666 11.2646 12.195 9.59375 10.1333 9.59375H5.86663Z"
+                  fill="#114335"
+                />
+              </svg>
+            </div>
+            <div class="header-main__nav-button-name">Профиль</div>
+          </a>
+        </div>
+        <div class="header-cart">
+          <a href="#" class="header-cart__btn">
+            <div class="header-cart__btn-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.04414 0.380066L0.0224609 0.68657L3.33649 11.7333H16V4.79998C16 3.32723 14.8061 2.13332 13.3333 2.13332H1.57012L1.04414 0.380066Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.86673 12.8C4.98308 12.8 4.26673 13.5163 4.26673 14.4C4.26673 15.2836 4.98308 16 5.86673 16C6.75039 16 7.46673 15.2836 7.46673 14.4C7.46673 13.5163 6.75039 12.8 5.86673 12.8ZM5.3334 14.4C5.3334 14.1054 5.57218 13.8667 5.86673 13.8667C6.16128 13.8667 6.40007 14.1054 6.40007 14.4C6.40007 14.6945 6.16128 14.9333 5.86673 14.9333C5.57218 14.9333 5.3334 14.6945 5.3334 14.4Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.3334 12.8C12.4497 12.8 11.7334 13.5163 11.7334 14.4C11.7334 15.2836 12.4497 16 13.3334 16C14.2171 16 14.9334 15.2836 14.9334 14.4C14.9334 13.5163 14.2171 12.8 13.3334 12.8ZM12.8001 14.4C12.8001 14.1054 13.0388 13.8667 13.3334 13.8667C13.628 13.8667 13.8667 14.1054 13.8667 14.4C13.8667 14.6945 13.628 14.9333 13.3334 14.9333C13.0388 14.9333 12.8001 14.6945 12.8001 14.4Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="header-cart__btn-counter">12</div>
+          </a>
+          <div class="header-cart__sum">1 000 257.34 руб</div>
+        </div>
       </div>
 
-      <a href="#" class="mobile-more more-link netbook-visible">
-        <span class="is-title">скачать прайс-лист</span>
-        <div class="more-link__arrow">
-          <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 0L6 8" stroke="black" />
-            <path d="M1 4L6 8L11 4" stroke="black" />
-            <path d="M1 10H11" stroke="black" />
-          </svg>
-        </div>
-      </a>
+      <div class="header-callback-btn netbook-visible" data-popup="callback">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.6873 6.41662C6.28584 7.66324 7.10176 8.83162 8.13507 9.86493C9.16838 10.8982 10.3368 11.7142 11.5834 12.3127C11.6906 12.3642 11.7442 12.3899 11.8121 12.4097C12.0532 12.48 12.3492 12.4295 12.5534 12.2833C12.6108 12.2422 12.66 12.193 12.7583 12.0947C13.059 11.794 13.2093 11.6437 13.3604 11.5454C13.9305 11.1748 14.6654 11.1748 15.2355 11.5454C15.3866 11.6437 15.537 11.794 15.8376 12.0947L16.0052 12.2623C16.4622 12.7193 16.6907 12.9478 16.8148 13.1932C17.0617 13.6813 17.0617 14.2577 16.8148 14.7458C16.6907 14.9912 16.4622 15.2197 16.0052 15.6767L15.8696 15.8123C15.4142 16.2678 15.1864 16.4955 14.8768 16.6694C14.5333 16.8624 13.9997 17.0012 13.6056 17C13.2505 16.9989 13.0078 16.93 12.5224 16.7923C9.91378 16.0519 7.45226 14.6549 5.39869 12.6013C3.34511 10.5477 1.94812 8.08622 1.20772 5.47761C1.06995 4.99221 1.00106 4.7495 1.00001 4.39439C0.998835 4.00033 1.1376 3.46673 1.33059 3.12317C1.50452 2.81356 1.73225 2.58583 2.1877 2.13037L2.32326 1.99481C2.78028 1.53779 3.00879 1.30928 3.25421 1.18515C3.74229 0.938283 4.3187 0.938283 4.80678 1.18515C5.05219 1.30928 5.2807 1.53779 5.73772 1.99481L5.9053 2.16239C6.20595 2.46304 6.35628 2.61337 6.45456 2.76453C6.8252 3.33459 6.8252 4.0695 6.45456 4.63956C6.35628 4.79072 6.20595 4.94105 5.9053 5.24169C5.807 5.34 5.75785 5.38915 5.71671 5.44661C5.5705 5.65079 5.52002 5.94684 5.5903 6.18793C5.61008 6.25577 5.63582 6.30939 5.6873 6.41662Z"
+            stroke="#114335"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </header>
+
+<div class="burger-menu container-padding">
+  <div class="header-catalog-btn">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M6.7498 6.74995H7.2498M6.7498 7.24995H7.2498M6.7498 2.08328H7.2498M6.7498 2.58328H7.2498M6.7498 11.4166H7.2498M6.7498 11.9166H7.2498M2.08313 6.74995H2.58313M2.08313 7.24995H2.58313M2.08313 2.08328H2.58313M2.08313 2.58328H2.58313M2.08313 11.4166H2.58313M2.08313 11.9166H2.58313M11.4165 6.74995H11.9165M11.4165 7.24995H11.9165M11.4165 2.08328H11.9165M11.4165 2.58328H11.9165M11.4165 11.4166H11.9165M11.4165 11.9166H11.9165M7.66663 6.99999C7.66663 7.36818 7.36815 7.66666 6.99996 7.66666C6.63177 7.66666 6.33329 7.36818 6.33329 6.99999C6.33329 6.6318 6.63177 6.33332 6.99996 6.33332C7.36815 6.33332 7.66663 6.6318 7.66663 6.99999ZM7.66663 2.33332C7.66663 2.70151 7.36815 2.99999 6.99996 2.99999C6.63177 2.99999 6.33329 2.70151 6.33329 2.33332C6.33329 1.96513 6.63177 1.66666 6.99996 1.66666C7.36815 1.66666 7.66663 1.96513 7.66663 2.33332ZM7.66663 11.6667C7.66663 12.0348 7.36815 12.3333 6.99996 12.3333C6.63177 12.3333 6.33329 12.0348 6.33329 11.6667C6.33329 11.2985 6.63177 11 6.99996 11C7.36815 11 7.66663 11.2985 7.66663 11.6667ZM2.99996 6.99999C2.99996 7.36818 2.70148 7.66666 2.33329 7.66666C1.9651 7.66666 1.66663 7.36818 1.66663 6.99999C1.66663 6.6318 1.9651 6.33332 2.33329 6.33332C2.70148 6.33332 2.99996 6.6318 2.99996 6.99999ZM2.99996 2.33332C2.99996 2.70151 2.70148 2.99999 2.33329 2.99999C1.9651 2.99999 1.66663 2.70151 1.66663 2.33332C1.66663 1.96513 1.9651 1.66666 2.33329 1.66666C2.70148 1.66666 2.99996 1.96513 2.99996 2.33332ZM2.99996 11.6667C2.99996 12.0348 2.70148 12.3333 2.33329 12.3333C1.9651 12.3333 1.66663 12.0348 1.66663 11.6667C1.66663 11.2985 1.9651 11 2.33329 11C2.70148 11 2.99996 11.2985 2.99996 11.6667ZM12.3333 6.99999C12.3333 7.36818 12.0348 7.66666 11.6666 7.66666C11.2984 7.66666 11 7.36818 11 6.99999C11 6.6318 11.2984 6.33332 11.6666 6.33332C12.0348 6.33332 12.3333 6.6318 12.3333 6.99999ZM12.3333 2.33332C12.3333 2.70151 12.0348 2.99999 11.6666 2.99999C11.2984 2.99999 11 2.70151 11 2.33332C11 1.96513 11.2984 1.66666 11.6666 1.66666C12.0348 1.66666 12.3333 1.96513 12.3333 2.33332ZM12.3333 11.6667C12.3333 12.0348 12.0348 12.3333 11.6666 12.3333C11.2984 12.3333 11 12.0348 11 11.6667C11 11.2985 11.2984 11 11.6666 11C12.0348 11 12.3333 11.2985 12.3333 11.6667Z"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+    Каталог продукции
+  </div>
+
+  <nav class="burger-menu-nav">
+    <div class="burger-menu-nav-item-wr js-accordion-item">
+      <div class="burger-menu-nav-item js-accordion-item-header">
+        О компании
+        <div class="burger-menu-nav-item__button"></div>
+      </div>
+      <div class="js-accordion-item__content">
+        <div class="burger-menu-nav-item__submenu">
+          <a href="#">Оплата</a>
+          <a href="#">Способы доставки</a>
+          <a href="#">Возврат товара и денежных средств</a>
+          <a href="#">Партнерская программа</a>
+          <a href="#">Часто задаваемые вопросы</a>
+          <a href="#">Договор публичной оферты</a>
+        </div>
+      </div>
+    </div>
+    <div class="burger-menu-nav-item-wr js-accordion-item">
+      <div class="burger-menu-nav-item js-accordion-item-header">
+        Покупателю
+        <div class="burger-menu-nav-item__button"></div>
+      </div>
+      <div class="js-accordion-item__content">
+        <div class="burger-menu-nav-item__submenu">
+          <a href="#">Оплата</a>
+          <a href="#">Способы доставки</a>
+          <a href="#">Возврат товара и денежных средств</a>
+          <a href="#">Партнерская программа</a>
+          <a href="#">Часто задаваемые вопросы</a>
+          <a href="#">Договор публичной оферты</a>
+        </div>
+      </div>
+    </div>
+    <div class="burger-menu-nav-item">Для бизнеса</div>
+    <div class="burger-menu-nav-item">Новости</div>
+    <div class="burger-menu-nav-item">Акции</div>
+    <div class="burger-menu-nav-item">Контакты</div>
+  </nav>
+
+  <div class="burger-menu-contacts">
+    <a href="tel:+375 29 18 18 580" class="burger-menu-contacts__item">
+      <div>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.6873 6.41662C6.28584 7.66324 7.10176 8.83162 8.13507 9.86493C9.16838 10.8982 10.3368 11.7142 11.5834 12.3127C11.6906 12.3642 11.7442 12.3899 11.8121 12.4097C12.0532 12.48 12.3492 12.4295 12.5534 12.2833C12.6108 12.2422 12.66 12.193 12.7583 12.0947C13.059 11.794 13.2093 11.6437 13.3604 11.5454C13.9305 11.1748 14.6654 11.1748 15.2355 11.5454C15.3866 11.6437 15.537 11.794 15.8376 12.0947L16.0052 12.2623C16.4622 12.7193 16.6907 12.9478 16.8148 13.1932C17.0617 13.6813 17.0617 14.2577 16.8148 14.7458C16.6907 14.9912 16.4622 15.2197 16.0052 15.6767L15.8696 15.8123C15.4142 16.2678 15.1864 16.4955 14.8768 16.6694C14.5333 16.8624 13.9997 17.0012 13.6056 17C13.2505 16.9989 13.0078 16.93 12.5224 16.7923C9.91378 16.0519 7.45226 14.6549 5.39868 12.6013C3.34511 10.5477 1.94812 8.08622 1.20772 5.47761C1.06995 4.99221 1.00106 4.7495 1.00001 4.39439C0.998835 4.00033 1.1376 3.46673 1.33059 3.12317C1.50452 2.81356 1.73225 2.58583 2.1877 2.13037L2.32326 1.99481C2.78028 1.53779 3.00879 1.30928 3.25421 1.18515C3.74229 0.938283 4.3187 0.938283 4.80678 1.18515C5.05219 1.30928 5.2807 1.53779 5.73772 1.99481L5.9053 2.16239C6.20595 2.46304 6.35628 2.61337 6.45456 2.76453C6.8252 3.33459 6.8252 4.0695 6.45456 4.63956C6.35628 4.79072 6.20595 4.94105 5.9053 5.24169C5.807 5.34 5.75785 5.38915 5.71671 5.44661C5.5705 5.65079 5.52002 5.94684 5.5903 6.18793C5.61008 6.25577 5.63582 6.30939 5.6873 6.41662Z"
+            stroke="#114335"
+            stroke-width="1.5"
+          />
+        </svg>
+      </div>
+      <div>
+        <div class="headert-top__contacts-item-label">Оптовый отдел:</div>
+        <div class="headert-top__contacts-item-link">+375 29 18 18 580</div>
+      </div>
+    </a>
+
+    <a href="tel:+375 29 11 44 853" class="burger-menu-contacts__item">
+      <div>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.6873 6.41662C6.28584 7.66324 7.10176 8.83162 8.13507 9.86493C9.16838 10.8982 10.3368 11.7142 11.5834 12.3127C11.6906 12.3642 11.7442 12.3899 11.8121 12.4097C12.0532 12.48 12.3492 12.4295 12.5534 12.2833C12.6108 12.2422 12.66 12.193 12.7583 12.0947C13.059 11.794 13.2093 11.6437 13.3604 11.5454C13.9305 11.1748 14.6654 11.1748 15.2355 11.5454C15.3866 11.6437 15.537 11.794 15.8376 12.0947L16.0052 12.2623C16.4622 12.7193 16.6907 12.9478 16.8148 13.1932C17.0617 13.6813 17.0617 14.2577 16.8148 14.7458C16.6907 14.9912 16.4622 15.2197 16.0052 15.6767L15.8696 15.8123C15.4142 16.2678 15.1864 16.4955 14.8768 16.6694C14.5333 16.8624 13.9997 17.0012 13.6056 17C13.2505 16.9989 13.0078 16.93 12.5224 16.7923C9.91378 16.0519 7.45226 14.6549 5.39868 12.6013C3.34511 10.5477 1.94812 8.08622 1.20772 5.47761C1.06995 4.99221 1.00106 4.7495 1.00001 4.39439C0.998835 4.00033 1.1376 3.46673 1.33059 3.12317C1.50452 2.81356 1.73225 2.58583 2.1877 2.13037L2.32326 1.99481C2.78028 1.53779 3.00879 1.30928 3.25421 1.18515C3.74229 0.938283 4.3187 0.938283 4.80678 1.18515C5.05219 1.30928 5.2807 1.53779 5.73772 1.99481L5.9053 2.16239C6.20595 2.46304 6.35628 2.61337 6.45456 2.76453C6.8252 3.33459 6.8252 4.0695 6.45456 4.63956C6.35628 4.79072 6.20595 4.94105 5.9053 5.24169C5.807 5.34 5.75785 5.38915 5.71671 5.44661C5.5705 5.65079 5.52002 5.94684 5.5903 6.18793C5.61008 6.25577 5.63582 6.30939 5.6873 6.41662Z"
+            stroke="#114335"
+            stroke-width="1.5"
+          />
+        </svg>
+      </div>
+      <div>
+        <div class="headert-top__contacts-item-label">Розничный магазин:</div>
+        <div class="headert-top__contacts-item-link">+375 29 11 44 853</div>
+      </div>
+    </a>
+
+    <div class="burger-menu-contacts__button button is-ghost" data-popup="callback">Заказать звонок</div>
+  </div>
+</div>
+
+<div class="mobile-bottom-bar container-padding netbook-visible">
+  <a href="#" class="header-main__nav-button">
+    <div class="header-main__nav-button-icon">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_96_1349)">
+          <path
+            d="M13 8.5L13 16M8 -2.18557e-07L8 16M3 7L3 16"
+            stroke="#114335"
+            stroke-width="2"
+            stroke-linecap="square"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_96_1349">
+            <rect width="16" height="16" fill="white" transform="translate(16) rotate(90)" />
+          </clipPath>
+        </defs>
+      </svg>
+      <div class="header-main__nav-button-counter">7</div>
+    </div>
+    <div class="header-main__nav-button-name">Сравнение</div>
+  </a>
+  <a href="#" class="header-main__nav-button">
+    <div class="header-main__nav-button-icon">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M14.6161 1.23978e-05L2.88281 0V15.4667C2.88281 15.6717 3.00033 15.8586 3.18511 15.9474C3.36989 16.0362 3.58923 16.0112 3.74932 15.8831L8.74948 11.883L13.7496 15.8831C13.9097 16.0112 14.1291 16.0362 14.3138 15.9474C14.4986 15.8586 14.6161 15.6717 14.6161 15.4667V1.23978e-05Z"
+          fill="#114335"
+        />
+      </svg>
+
+      <div class="header-main__nav-button-counter">34</div>
+    </div>
+    <div class="header-main__nav-button-name">Избранное</div>
+  </a>
+  <a href="#" class="header-main__nav-button">
+    <div class="header-main__nav-button-icon">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_530_20661)">
+          <path
+            d="M7.75114 7.74996H8.25114M7.75114 8.24996H8.25114M7.75114 2.08329H8.25114M7.75114 2.58329H8.25114M7.75114 13.4166H8.25114M7.75114 13.9166H8.25114M2.08447 7.74996H2.58447M2.08447 8.24996H2.58447M2.08447 2.08329H2.58447M2.08447 2.58329H2.58447M2.08447 13.4166H2.58447M2.08447 13.9166H2.58447M13.4178 7.74996H13.9178M13.4178 8.24996H13.9178M13.4178 2.08329H13.9178M13.4178 2.58329H13.9178M13.4178 13.4166H13.9178M13.4178 13.9166H13.9178M8.66797 8C8.66797 8.36819 8.36949 8.66667 8.0013 8.66667C7.63311 8.66667 7.33464 8.36819 7.33464 8C7.33464 7.63181 7.63311 7.33333 8.0013 7.33333C8.36949 7.33333 8.66797 7.63181 8.66797 8ZM8.66797 2.33333C8.66797 2.70152 8.36949 3 8.0013 3C7.63311 3 7.33464 2.70152 7.33464 2.33333C7.33464 1.96514 7.63311 1.66667 8.0013 1.66667C8.36949 1.66667 8.66797 1.96514 8.66797 2.33333ZM8.66797 13.6667C8.66797 14.0349 8.36949 14.3333 8.0013 14.3333C7.63311 14.3333 7.33464 14.0349 7.33464 13.6667C7.33464 13.2985 7.63311 13 8.0013 13C8.36949 13 8.66797 13.2985 8.66797 13.6667ZM3.0013 8C3.0013 8.36819 2.70283 8.66667 2.33464 8.66667C1.96645 8.66667 1.66797 8.36819 1.66797 8C1.66797 7.63181 1.96645 7.33333 2.33464 7.33333C2.70283 7.33333 3.0013 7.63181 3.0013 8ZM3.0013 2.33333C3.0013 2.70152 2.70283 3 2.33464 3C1.96645 3 1.66797 2.70152 1.66797 2.33333C1.66797 1.96514 1.96645 1.66667 2.33464 1.66667C2.70283 1.66667 3.0013 1.96514 3.0013 2.33333ZM3.0013 13.6667C3.0013 14.0349 2.70283 14.3333 2.33464 14.3333C1.96645 14.3333 1.66797 14.0349 1.66797 13.6667C1.66797 13.2985 1.96645 13 2.33464 13C2.70283 13 3.0013 13.2985 3.0013 13.6667ZM14.3346 8C14.3346 8.36819 14.0362 8.66667 13.668 8.66667C13.2998 8.66667 13.0013 8.36819 13.0013 8C13.0013 7.63181 13.2998 7.33333 13.668 7.33333C14.0362 7.33333 14.3346 7.63181 14.3346 8ZM14.3346 2.33333C14.3346 2.70152 14.0362 3 13.668 3C13.2998 3 13.0013 2.70152 13.0013 2.33333C13.0013 1.96514 13.2998 1.66667 13.668 1.66667C14.0362 1.66667 14.3346 1.96514 14.3346 2.33333ZM14.3346 13.6667C14.3346 14.0349 14.0362 14.3333 13.668 14.3333C13.2998 14.3333 13.0013 14.0349 13.0013 13.6667C13.0013 13.2985 13.2998 13 13.668 13C14.0362 13 14.3346 13.2985 14.3346 13.6667Z"
+            stroke="#114335"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_530_20661">
+            <rect width="16" height="16" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    <div class="header-main__nav-button-name">Каталог</div>
+  </a>
+  <a href="#" class="header-main__nav-button">
+    <div class="header-main__nav-button-icon">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1.79512 0.380077L0.773438 0.686582L4.08746 11.7333H16.7509V4.8C16.7509 3.32724 15.557 2.13333 14.0843 2.13333H2.32109L1.79512 0.380077Z"
+          fill="#114335"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M6.61771 12.8C5.73405 12.8 5.01771 13.5163 5.01771 14.4C5.01771 15.2837 5.73405 16 6.61771 16C7.50136 16 8.21771 15.2837 8.21771 14.4C8.21771 13.5163 7.50136 12.8 6.61771 12.8ZM6.08438 14.4C6.08438 14.1054 6.32316 13.8667 6.61771 13.8667C6.91226 13.8667 7.15104 14.1054 7.15104 14.4C7.15104 14.6945 6.91226 14.9333 6.61771 14.9333C6.32316 14.9333 6.08438 14.6945 6.08438 14.4Z"
+          fill="#114335"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M14.0844 12.8C13.2007 12.8 12.4844 13.5163 12.4844 14.4C12.4844 15.2837 13.2007 16 14.0844 16C14.968 16 15.6844 15.2837 15.6844 14.4C15.6844 13.5163 14.968 12.8 14.0844 12.8ZM13.551 14.4C13.551 14.1054 13.7898 13.8667 14.0844 13.8667C14.3789 13.8667 14.6177 14.1054 14.6177 14.4C14.6177 14.6945 14.3789 14.9333 14.0844 14.9333C13.7898 14.9333 13.551 14.6945 13.551 14.4Z"
+          fill="#114335"
+        />
+      </svg>
+
+      <div class="header-main__nav-button-counter">12</div>
+    </div>
+    <div class="header-main__nav-button-name">Корзина</div>
+  </a>
+  <a href="#" class="header-main__nav-button">
+    <div class="header-main__nav-button-icon">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M7.99948 0C5.93779 0 4.26615 1.67005 4.26615 3.73125C4.26615 5.79244 5.93779 7.46249 7.99948 7.46249C10.0612 7.46249 11.7328 5.79244 11.7328 3.73125C11.7328 1.67005 10.0612 0 7.99948 0Z"
+          fill="#114335"
+        />
+        <path
+          d="M5.86615 9.59375C3.8044 9.59375 2.13281 11.2646 2.13281 13.3265V15.9903H13.8661V13.3265C13.8661 11.2646 12.1946 9.59375 10.1328 9.59375H5.86615Z"
+          fill="#114335"
+        />
+      </svg>
+    </div>
+    <div class="header-main__nav-button-name">Профиль</div>
+  </a>
+</div>

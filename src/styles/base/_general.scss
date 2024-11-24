@@ -2,7 +2,7 @@
   --primary-green: #114335;
   --primary-orange: #ea5c21;
   --red: #ff0400;
-  --balck: #2e2e2e;
+  --black: #2e2e2e;
   --grey-80: #6a6a6a;
   --grey-60: #9f9f9f;
   --grey-40: #c0c0c0;
@@ -15,6 +15,8 @@
   --header-height: 108px;
 
   --font-family: "Roboto Flex", serif;
+
+  --mobile-bottom-bar-height: 50px;
 }
 
 @media screen and (max-width: $lg) {
@@ -22,7 +24,7 @@
     --container-padding: 13px;
     --section-margin-bottom-l: 70px;
     --section-margin-bottom-s: 50px;
-    --header-height: 58px;
+    --header-height: 74px;
   }
 }
 
@@ -118,12 +120,28 @@ i {
 }
 
 .container {
-  padding: 0 var(--container-padding);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: calc(1400px + var(--container-padding) * 2);
+}
+
+.container-padding {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
 }
 
 .content-container {
   max-width: 950px;
   margin: 0 auto;
+}
+
+.page {
+  padding-top: var(--header-height);
+  height: 100vh;
+}
+
+[data-popup] {
+  cursor: pointer;
 }
 
 .editior-content {
@@ -134,10 +152,6 @@ i {
       margin-bottom: 10px;
     }
   }
-}
-
-.text-center {
-  text-align: center;
 }
 
 .breadcrumbs {
@@ -194,23 +208,33 @@ i {
 }
 
 .text-link {
+  transition: 0.2s;
+
   &:hover {
     color: var(--primary-orange);
+  }
+}
+
+.orange-link {
+  color: var(--primary-orange);
+  transition: 0.2s;
+
+  &:hover {
+    color: var(--primary-gren);
   }
 }
 
 .more-link {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: 700;
+  color: var(--primary-green);
+
+  @include Base-14(400);
 
   &__arrow {
     svg {
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 16px;
+      height: 16px;
     }
     path {
       stroke: currentColor;
@@ -222,22 +246,19 @@ i {
   color: var(--grey-80);
 }
 
-.sub-16 {
-  font-size: 1.6rem;
-  line-height: 140%;
+.base-16 {
+  @include Base-16(400);
 
   @media screen and (max-width: $sm) {
-    font-size: 1.4rem;
+    @include Base-14(400);
   }
 }
 
 .sub-20 {
-  font-size: 2rem;
-  line-height: 120%;
-  letter-spacing: -0.03em;
+  @include Sub-20(400);
 
   @media screen and (max-width: $sm) {
-    font-size: 1.8rem;
+    @include Sub-18(400);
   }
 }
 
@@ -255,96 +276,78 @@ i {
 
 h1,
 .h1 {
-  font-weight: 700;
-  font-size: 4.8rem;
-  line-height: 110%;
-  letter-spacing: 0.02em;
+  @include Header-H1(500);
 
-  @media screen and (max-width: $lg) {
+  /*   @media screen and (max-width: $lg) {
     font-size: 3.4rem;
   }
 
   @media screen and (max-width: $sm) {
     font-size: 2.4rem;
     line-height: 120%;
-  }
+  } */
 }
 
 h2,
 .h2 {
-  font-weight: 700;
-  font-size: 4.2rem;
-  line-height: 110%;
-  letter-spacing: 0.02em;
+  @include Header-H2(500);
 
-  @media screen and (max-width: $lg) {
+  /*   @media screen and (max-width: $lg) {
     font-size: 3rem;
   }
 
   @media screen and (max-width: $sm) {
     font-size: 2.2rem;
     line-height: 120%;
-  }
+  } */
 }
 
 h3,
 .h3 {
-  font-weight: 700;
-  font-size: 3.6rem;
-  line-height: 110%;
-  letter-spacing: 0.02em;
+  @include Header-H3(500);
 
-  @media screen and (max-width: $lg) {
+  /*   @media screen and (max-width: $lg) {
     font-size: 2.8rem;
   }
 
   @media screen and (max-width: $sm) {
     font-size: 2rem;
     line-height: 120%;
-  }
+  } */
 }
 
 h4,
 .h4 {
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 110%;
-  letter-spacing: 0.02em;
+  @include Header-H4(500);
 
-  @media screen and (max-width: $lg) {
+  /*   @media screen and (max-width: $lg) {
     font-size: 2rem;
   }
 
   @media screen and (max-width: $sm) {
     font-size: 1.8rem;
     line-height: 120%;
-  }
+  } */
 }
 
 h5,
 .h5 {
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 110%;
-  letter-spacing: 0.02em;
+  @include Header-H5(500);
 
-  @media screen and (max-width: $sm) {
+  /*   @media screen and (max-width: $sm) {
     font-size: 1.6rem;
     line-height: 120%;
-  }
+  } */
 }
 
 h6,
 .h6 {
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 140%;
-  letter-spacing: 0.02em;
+  @include Header-H6(500);
 
-  @media screen and (max-width: $sm) {
+  /*   @media screen and (max-width: $sm) {
     font-size: 1.2rem;
     line-height: 120%;
-  }
+  } */
 }
 
 .button {
@@ -358,6 +361,7 @@ h6,
   gap: 10px;
   cursor: pointer;
   border: 1px solid transparent;
+  border-radius: 4px;
 
   @include Base-16(400);
 
@@ -380,7 +384,8 @@ h6,
 
   &.is-ghost {
     background: transparent;
-    color: var(--black);
+    color: var(--primary-green);
+    border-color: var(--grey-20);
 
     &:hover {
       background: var(--primary-orange);
@@ -437,7 +442,7 @@ h6,
   }
 }
 
-.swiper-arrow {
+/* .swiper-arrow {
   width: 4.8rem;
   height: 16rem;
   background: var(--black);
@@ -508,9 +513,9 @@ h6,
       border: none;
     }
   }
-}
+} */
 
-.tabs {
+/* .tabs {
   width: 100%;
   overflow: hidden;
 
@@ -519,7 +524,6 @@ h6,
     align-items: center;
     flex-wrap: wrap;
     gap: 4rem;
-    /*     margin-bottom: 20px; */
   }
 
   &__button {
@@ -544,7 +548,7 @@ h6,
       display: block;
     }
   }
-}
+} */
 
 /* .swiper-scrollbar {
   background: none;
@@ -586,7 +590,21 @@ h6,
 
  */
 
-.accordion-item {
+.js-accordion-item-header {
+  position: relative;
+}
+
+.js-accordion-item__content {
+  overflow: hidden;
+  transition: 0.3s;
+  max-height: 0;
+
+  &.is-active {
+    max-height: initial !important;
+  }
+}
+
+/* .accordion-item {
   &__button {
     flex-shrink: 0;
     width: 0.9rem;
@@ -636,14 +654,7 @@ h6,
   }
 
   &__content {
-    overflow: hidden;
-    transition: 0.3s;
-    max-height: 0;
     border-bottom: 1px solid #dadada;
-
-    &.is-active {
-      max-height: initial !important;
-    }
 
     &-inner {
       padding: 0 0 4rem 0;
@@ -657,4 +668,4 @@ h6,
       }
     }
   }
-}
+} */

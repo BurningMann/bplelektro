@@ -127,7 +127,7 @@ function accordionClose(header, content) {
       container.querySelector('.is-active').classList.remove('is-active');
       el.classList.add('is-active');
 
-      document.cookie = `catalog_grid_type=${type}; expires=0;`;
+      document.cookie = `catalog_grid_type=${type}; expires=0; path=/;`;
 
       if (type === 'grid') {
         catalogGrid.classList.remove(`is-list`);
