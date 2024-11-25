@@ -4,150 +4,88 @@
   &__placeholder {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 12px;
     z-index: 5;
     transform: translate(0, -50%);
-    color: var(--grey-80);
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 130%;
+    color: var(--grey-60);
+    transition: 0.2s;
+    width: max-content;
 
-    @media screen and (max-width: $lg) {
-      font-size: 1.2rem;
-    }
+    @include Base-14(400);
   }
 
   &.is-required {
     .form-input__placeholder {
       &::after {
         content: " *";
-        color: red;
+        color: var(--primary-orange);
       }
     }
   }
 
   &.is-textarea {
     .form-input__placeholder {
-      top: 2rem;
+      top: 12px;
     }
   }
 
   &.is-error {
     .input {
-      border-color: red;
+      border-color: var(--red);
+      background: #fff0ef;
     }
 
     .checkbox-input__check {
-      border-color: red;
+      border-color: var(--red);
     }
   }
 }
 
 .input {
   width: 100%;
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--black);
-  line-height: 130%;
-  font-weight: 400;
-  height: 4.2rem;
-  padding: 0;
+  background: var(--grey-20);
+  border: 1px solid transparent;
+  padding: 10px 12px 0;
   transition: 0.3s;
-  color: #000;
+  color: var(--black);
   position: relative;
   z-index: 2;
-  font-size: 1.2rem;
+  height: 36px;
+  border-radius: 4px;
 
-  @media screen and (max-width: $md) {
-    &:not(.textarea) {
-      height: 5.6rem;
-      padding: 0 2rem;
-    }
-  }
+  @include Base-14(400);
 
   &.is-error {
-    color: red;
-    border-color: red;
+    border-color: var(--red);
+    background: #fff0ef;
   }
 
   &:focus,
   &:not(:placeholder-shown) {
     & + .form-input__placeholder {
-      display: none;
+      top: 25%;
+
+      @include Base-11(400);
     }
   }
 }
 
 .textarea {
-  padding: 1rem 0;
-  height: 7rem;
+  padding: 12px;
+  height: 80px;
   resize: none;
 
   &::placeholder {
-    color: var(--grey-80);
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 130%;
+    color: var(--grey-60);
 
-    @media screen and (max-width: $lg) {
-      font-size: 1.2rem;
-    }
+    @include Base-14(400);
   }
 }
 
-/* .phone-input {
-  &__mask-switch {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translate(0, -50%);
-    z-index: 5;
-    cursor: pointer;
-  }
-
-  &__main-icon {
-    width: 2.4rem;
-  }
-
-  &__dropdown-item {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-weight: 500;
-    padding: 10px;
-    transition: 0.3s;
-    color: var(--c-black);
-
-    &:hover {
-      background: #e7e7e7;
-    }
-  }
-
-  &__mask-switch-dropdown {
-    width: max-content;
-    background: #fff;
-    padding: 5px 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    transform: translate(0, 5px);
-    position: absolute;
-    top: calc(100% + 5px);
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--c-prime);
-
-    &.is-active {
-      opacity: 1;
-      visibility: visible;
-      transform: translate(0, 0);
-    }
-  }
-} */
-
 .file-input {
   max-width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--grey-20);
 
   input {
     display: none;
@@ -157,8 +95,15 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 10px;
     cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 205px;
+
+    @media screen and (max-width: $sm) {
+      grid-template-columns: 1fr;
+    }
 
     &::before,
     &::after {
@@ -166,9 +111,17 @@
     }
   }
 
+  &__button-left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
   &__plus {
     transition: 0.3s;
     flex-shrink: 0;
+    margin-right: 6px;
   }
 
   &__name {
@@ -178,31 +131,47 @@
     overflow: hidden;
     text-wrap: nowrap;
     max-width: 100%;
+    color: var(--white);
+    width: calc(100% - 20px);
+
+    @include Base-14(400);
+  }
+
+  &__rules {
+    color: var(--white);
+    opacity: 0.6;
+    flex-shrink: 0;
+
+    @media screen and (min-width: $sm) {
+      max-width: 205px;
+    }
+
+    @include Base-11(400);
   }
 
   &.is-active {
-    /*     .file-input__plus {
+    .file-input__plus {
       transform: rotate(45deg);
-    } */
+    }
   }
 }
 
 .checkbox-input {
   display: flex;
-  gap: 0.8rem;
+  gap: 10px;
   cursor: pointer;
 
   label {
     display: flex;
-    gap: 0.8rem;
+    gap: 10px;
     cursor: pointer;
   }
 
   &__check {
-    width: 1.6rem;
-    height: 1.6rem;
-    background: none;
-    border: 0.5px solid var(--grey40);
+    width: 16px;
+    height: 16px;
+    border: 0.5px solid var(--white);
+    border-radius: 2px;
     background: var(--white);
     flex-shrink: 0;
     display: flex;
@@ -211,9 +180,6 @@
     cursor: pointer;
 
     &-icon {
-      width: 1rem;
-      height: 1rem;
-      background: var(--yellow);
       transform: scale(0);
       transition: 0.3s;
     }
@@ -243,14 +209,13 @@
   } */
 
   &__placeholder {
-    color: var(--grey-80);
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 140%;
+    color: var(--white);
 
-    @media screen and (max-width: $lg) {
-      font-size: 1.2rem;
+    a {
+      text-decoration: underline;
     }
+
+    @include Base-12(400);
   }
 
   input {
@@ -259,10 +224,6 @@
     &:checked + .checkbox-input__check {
       .checkbox-input__check-icon {
         transform: scale(1) rotate(0);
-      }
-
-      + .checkbox-input__placeholder {
-        color: var(--black);
       }
     }
 
@@ -314,8 +275,6 @@
   opacity: 0.333;
 }
 
-
-
 .custom-select-container select {
   visibility: hidden;
   position: absolute;
@@ -332,7 +291,6 @@
   z-index: 15;
   width: 100%;
 }
-
 
 /* .custom-select-optgroup > .custom-select-option {
   padding-left: 2em;
@@ -419,8 +377,8 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0, -10px);
-  transition: .3s;
-} 
+  transition: 0.3s;
+}
 
 .custom-select-dropdown.is-open {
   opacity: 1;

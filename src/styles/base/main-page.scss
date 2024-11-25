@@ -1,0 +1,363 @@
+.main-page {
+  margin-top: 20px;
+}
+
+.main-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $md) {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+}
+
+.main-tags__item {
+  padding: 0 12px;
+  background: var(--white);
+  border: 0.5px solid var(--grey-20);
+  border-radius: 40px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  @include Base-14(400);
+
+  &.is-new {
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+  }
+
+  &.is-sale {
+    border: 1px solid var(--primary-orange);
+    color: var(--primary-orange);
+  }
+}
+
+.main-slider-section__wr {
+  margin-bottom: 140px;
+
+  @media screen and (max-width: $sm) {
+    margin-bottom: var(--section-margin-bottom-s);
+  }
+}
+
+.main-slider-section {
+  display: grid;
+  grid-template-columns: 1fr 454px;
+  height: 460px;
+  gap: 10px;
+
+  @media screen and (max-width: $lg) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: $sm) {
+    height: 300px;
+  }
+}
+
+.main-slider-section__banners {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  overflow: hidden;
+
+  @media screen and (max-width: $lg) {
+    display: none;
+  }
+}
+
+.main-slider-section__banners-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.main-slider-section__banner {
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-slider-section__banner-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 5;
+  color: var(--white);
+
+  @include Sub-20(400);
+}
+
+.main-slider {
+  height: 100%;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .swiper {
+    height: 100%;
+  }
+
+  .swiper__pagination {
+    position: absolute;
+    right: 32px;
+    left: auto;
+    top: auto;
+    bottom: 32px;
+    z-index: 10;
+    width: max-content;
+  }
+}
+
+.main-slider__slide-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media screen and (max-width: $sm) {
+    padding: 16px;
+  }
+}
+
+.main-slider__slide-tag {
+  border: 0.5px solid var(--white);
+  border-radius: 40px;
+  padding: 0 12px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: max-content;
+  color: var(--white);
+  margin-bottom: 40px;
+
+  @include Base-14(400);
+
+  @media screen and (max-width: $sm) {
+    margin-bottom: 10px;
+  }
+}
+
+.main-slider__slide-name {
+  color: var(--white);
+  max-width: 571px;
+}
+
+.main-slider__tags {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding-top: 10px;
+
+  @media screen and (max-width: $lg) {
+    overflow: auto;
+    display: flex;
+  }
+}
+
+.main-slider__tags-item {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.5px solid var(--grey-20);
+  border-radius: 4px;
+  padding: 0 24px;
+  transition: 0.2s;
+
+  @media screen and (max-width: $lg) {
+    padding: 0 12px;
+    flex-shrink: 0;
+    width: 220px;
+  }
+
+  &:hover {
+    border-color: var(--primary-orange);
+  }
+}
+
+.main-slider__tags-item-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.main-slider__tags-item-name {
+  @include Base-14(400);
+}
+
+.why-take {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+
+  @media screen and (max-width: $lg) {
+    gap: 20px 10px;
+  }
+
+  @media screen and (max-width: $md) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.why-take-card__img {
+  height: 260px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: $md) {
+    gap: 10px;
+  }
+
+  @media screen and (max-width: $sm) {
+    height: 200px;
+  }
+}
+
+.why-take-card__title {
+  margin-bottom: 20px;
+
+  @include Sub-24(400);
+
+  @media screen and (max-width: $md) {
+    margin-bottom: 10px;
+  }
+}
+
+.why-take-card__description {
+  max-width: 338px;
+  max-height: 75px;
+  color: var(--grey-80);
+  margin-bottom: 50px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @include Base-14(400);
+
+  @media screen and (max-width: $md) {
+    margin-bottom: 20px;
+  }
+}
+
+.popular-series {
+  .swiper-slide {
+    width: 340px;
+  }
+}
+
+.popular-series-item {
+  position: relative;
+  height: 300px;
+  width: 340px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.popular-series-item__content {
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  left: 0;
+  width: 340px;
+  padding: 0 10px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.popular-series-item__title {
+  text-align: center;
+
+  .is-white & {
+    color: var(--white);
+  }
+
+  @include Sub-20(400);
+}
+
+.popular-series-item__subtitle {
+  color: var(--grey-80);
+  text-align: center;
+
+  .is-white & {
+    color: var(--grey-60);
+  }
+
+  @include Base-14(400);
+}
+
+.main-actions {
+  height: 460px;
+  display: grid;
+  grid-template-columns: 1fr 454px;
+  gap: 10px;
+
+  @media screen and (max-width: $lg) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: $md) {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  @media screen and (min-width: $md) {
+    .action-card:first-child {
+      grid-row: span 2;
+      height: 100%;
+      padding: 32px;
+
+      .action-card__title {
+        max-width: 450px;
+
+        @include Header-H4(500);
+      }
+
+      .action-card__description {
+        max-width: 400px;
+
+        @include Sub-20(400);
+      }
+    }
+  }
+}
+
+.main-page-content {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 120px;
+
+  @media screen and (max-width: $lg) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.main-page-content__description {
+  color: var(--grey-80);
+
+  @include Base-12(400);
+}
