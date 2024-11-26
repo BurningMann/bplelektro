@@ -404,6 +404,10 @@ h6,
 
   @include Base-16(400);
 
+  @media screen and (max-width: $sm) {
+    padding: 0 10px;
+  }
+
   &:hover {
     .button__arrow path {
       stroke: currentColor;

@@ -1,0 +1,252 @@
+.catalog-card {
+  background: var(--grey-20);
+  border-radius: 4px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.catalog-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.catalog-card__articul {
+  @include Base-11(409);
+}
+
+.catalog-card__articul-label {
+  color: var(--grey-60);
+}
+
+.catalog-card__top-btns {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.catalog-card__top-btn {
+  cursor: pointer;
+
+  &.is-comparison.is-active {
+    path {
+      stroke: var(--primary-green);
+    }
+  }
+
+  &.is-favorite.is-active {
+    path {
+      fill: var(--primary-green);
+    }
+  }
+}
+
+.catalog-card__center {
+  position: relative;
+  height: 175px;
+  margin-bottom: 8px;
+}
+
+.catalog-card__image-box {
+  background: var(--white);
+  height: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.catalog-card__image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.catalog-card__tags {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 5;
+}
+
+.catalog-card__tag {
+  border-radius: 40px;
+  padding: 0 4px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+
+  &.is-new {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+  }
+
+  &.is-sale {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+  }
+}
+
+.catalog-card__bonuses {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  border: 0.5px solid var(--grey-40);
+  border-radius: 40px;
+  padding: 0 8px;
+}
+
+.catalog-card__bonuses-value {
+  color: var(--primary-orange);
+
+  @include Base-11(400);
+}
+
+.catalog-card__vendor {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+.catalog-card__title {
+  height: 45px;
+  margin-bottom: 25px;
+
+  @include Base-12(400);
+}
+
+.catalog-card__price-line {
+  margin-bottom: 12px;
+}
+
+.catalog-card__price {
+  padding-right: 6px;
+
+  @include Base-16(600);
+}
+
+.catalog-card__price-additional {
+  color: var(--grey-60);
+
+  @include Base-12(400);
+}
+
+.catalog-card__cart-section {
+  margin-bottom: 12px;
+}
+
+.catalog-card__counter {
+  border: 0.5px solid var(--grey-40);
+  border-radius: 4px;
+  display: flex;
+  height: 28px;
+  overflow: hidden;
+  width: max-content;
+  flex-shrink: 0;
+}
+
+.catalog-card__counter-button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  background: var(--white);
+  cursor: pointer;
+}
+
+.catalog-card__counter-input {
+  height: 100%;
+  width: 48px;
+  border-left: 0.5px solid var(--grey-40);
+  border-right: 0.5px solid var(--grey-40);
+
+  input {
+    height: 100%;
+    width: 100%;
+    background: var(--white);
+    text-align: center;
+    border: none;
+    display: block;
+
+    @include Base-11(400);
+  }
+}
+
+.catalog-card__cart-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.catalog-card__cart-button {
+  width: 100%;
+}
+
+.catalog-card__availability {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.catalog-card__availability-text {
+  color: var(--primary-green);
+  border-bottom: 0.3px dashed currentColor;
+
+  .is-out & {
+    color: var(--grey-80);
+  }
+
+  @include Base-10(400);
+}
+
+.catalog-card__availability-counter {
+  color: var(--grey-80);
+
+  @include Base-10(400);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+
+  @media screen and (max-width: $xs) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (max-width: $md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: $lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: $xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .catalog-card {
+    height: 100%;
+  }
+}
+
+.products-grid__item-banner {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  max-height: 420px;
+}

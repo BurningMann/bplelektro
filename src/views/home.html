@@ -342,6 +342,26 @@
 
         <section class="page-section">
           <div class="page-section__title h3">Популярные товары</div>
+          <div class="products-grid">
+            <div class="products-grid__item">
+              <a href="#" class="products-grid__item-banner">
+                <img src="./img/catalog-grid-banner-1.png" alt="" class="fit-cover" />
+              </a>
+            </div>
+            <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+            <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+            <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+            <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+            <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+            <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+            <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+            <div class="products-grid__item">
+              <a href="#" class="products-grid__item-banner">
+                <img src="./img/catalog-grid-banner-2.png" alt="" class="fit-cover" />
+              </a>
+            </div>
+            <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+          </div>
         </section>
 
         <section class="page-section">
@@ -547,6 +567,53 @@
                 </svg>
               </div>
             </a>
+          </div>
+          <div class="product-slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product-slider__slide">
+                  @@include("../blocks/modules/catalogCard/index.html")
+                </div>
+                <div class="swiper-slide product-slider__slide">
+                  @@include("../blocks/modules/catalogCard/index.html")
+                </div>
+                <div class="swiper-slide product-slider__slide">
+                  @@include("../blocks/modules/catalogCard/index.html")
+                </div>
+                <div class="swiper-slide product-slider__slide">
+                  @@include("../blocks/modules/catalogCard/index.html")
+                </div>
+                <div class="swiper-slide product-slider__slide">
+                  @@include("../blocks/modules/catalogCard/index.html")
+                </div>
+                <div class="swiper-slide product-slider__slide">
+                  @@include("../blocks/modules/catalogCard/index.html")
+                </div>
+              </div>
+            </div>
+            <div class="popular-series__slider-arrows swiper-arrows-wr mobile-hidden">
+              <div class="swiper-arrow is-prev">
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9 1L1.65345 7.58579C0.782183 8.36684 0.782183 9.63317 1.65345 10.4142L9 17"
+                    stroke="#6A6A6A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="swiper-arrow is-next">
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 1L8.34655 7.58579C9.21782 8.36684 9.21782 9.63317 8.34655 10.4142L1 17"
+                    stroke="#6A6A6A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="swiper__pagination swiper-pagination-wr is-center mobile-visible"></div>
           </div>
         </section>
 

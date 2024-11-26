@@ -37,3 +37,34 @@ popularSeriesSlider.forEach((el) => {
     },
   });
 });
+
+const productsSlider = document.querySelectorAll('.product-slider');
+productsSlider.forEach((el) => {
+  const slider = el.querySelector('.swiper');
+  const swiper = new Swiper(slider, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      prevEl: el.querySelector('.swiper-arrow.is-prev'),
+      nextEl: el.querySelector('.swiper-arrow.is-next'),
+    },
+    pagination: {
+      el: el.querySelector('.swiper__pagination'),
+      clickable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      780: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+      1280: {
+        slidesPerView: 5,
+      },
+    },
+  });
+});

@@ -251,6 +251,50 @@ document.addEventListener('mouseup', (e) => {
   });
 })();
 
+/* Catalog card */
+const catalogCards = document.querySelectorAll('.catalog-card');
+catalogCards.forEach((el) => {
+  const topBtns = el.querySelectorAll('.catalog-card__top-btn');
+
+  topBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('is-active');
+    });
+  });
+});
+
+const cardCounter = document.querySelectorAll('.catalog-card__counter');
+
+cardCounter.forEach((btn) => {
+  const minusBtn = btn.querySelector('.catalog-card__counter-button.is-minus');
+  const plusBtn = btn.querySelector('.catalog-card__counter-button.is-plus');
+  const input = btn.querySelector('.catalog-card__counter-input input');
+
+  minusBtn.addEventListener('click', () => {
+    if (input.value <= 1) {
+      return;
+    }
+
+    input.value = Number(input.value) - 1;
+  });
+
+  plusBtn.addEventListener('click', () => {
+    input.value = Number(input.value) + 1;
+  });
+
+  input.addEventListener('change', () => {
+    const value = Number(input.value);
+
+    if (value <= 0 || isNaN(value)) {
+      input.value = 1;
+
+      return;
+    }
+
+    input.value = value;
+  });
+});
+
 import './import/modules';
 import './import/components';
 import './components/sliders';
