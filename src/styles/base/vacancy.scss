@@ -1,0 +1,97 @@
+.vacancy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vacancy-list__item-header {
+  @media screen and (min-width: $md) {
+    height: 130px;
+  }
+}
+
+.vacancy-list__item-header-content {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+  }
+}
+
+.vacancy-list__item-header-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 800px;
+
+  @media screen and (max-width: $md) {
+    width: auto;
+    gap: 10px;
+  }
+}
+
+.vacancy-list__item-header-content {
+  display: flex;
+}
+
+.vacancy-list__item-info-1 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.vacancy-list__item-info__label {
+  color: var(--grey-60);
+
+  @include Base-14(400);
+}
+
+.vacancy-list__item-info__value {
+  @include Sub-20(400);
+}
+
+.vacancy-list__item-info-2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+
+  @media screen and (max-width: $md) {
+    gap: 10px;
+  }
+}
+
+.vacancy-list__item-info-2-top {
+  @include Sub-20(400);
+}
+
+.vacancy-list__item-info-2-bottom {
+  @include Base-14(400);
+}
+
+.vacancy-list__item-content-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.vacancy-list__item-content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vacancy-list__item-content-box-title {
+  @include Sub-20(400);
+}
+
+.vacancy-list__item-content-box-content {
+  color: var(--grey-80);
+
+  @include Base-14(400);
+}

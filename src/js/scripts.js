@@ -295,6 +295,20 @@ cardCounter.forEach((btn) => {
   });
 });
 
+const anchorButtons = document.querySelectorAll('[data-anchor]');
+anchorButtons.forEach((el) => {
+  el.addEventListener('click', () => {
+    const targetData = el.dataset.anchor;
+    const target = document.querySelector(`#${targetData}`);
+
+    if (!target) {
+      return;
+    }
+
+    target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  });
+});
+
 import './import/modules';
 import './import/components';
 import './components/sliders';

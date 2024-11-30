@@ -1,0 +1,16 @@
+.sert-slider {
+  height: 430px;
+
+  @media screen and (max-width: $sm) {
+    height: auto;
+  }
+
+  .swiper {
+    height: 100%;
+  }
+}
+
+.sert-slider__slide {
+  display: block;
+  height: 100%;
+}

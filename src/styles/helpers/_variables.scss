@@ -28,6 +28,7 @@ $xxl: 1440px;
   font-size: 42px;
   font-weight: $weight;
   line-height: 46.2px;
+  letter-spacing: -0.06em;
 }
 
 @mixin Header-H5($weight) {
@@ -46,46 +47,54 @@ $xxl: 1440px;
   font-size: 24px;
   font-weight: $weight;
   line-height: 28.8px;
+  letter-spacing: -0.02em;
 }
 
 @mixin Sub-20($weight) {
   font-size: 20px;
   font-weight: $weight;
   line-height: 22px;
+  letter-spacing: -0.02em;
 }
 
 @mixin Sub-18($weight) {
   font-size: 18px;
   font-weight: $weight;
   line-height: 21.6px;
+  letter-spacing: -0.02em;
 }
 
 @mixin Base-16($weight) {
   font-size: 16px;
   font-weight: $weight;
   line-height: 22.4px;
+  letter-spacing: -0.02em;
 }
 
 @mixin Base-14($weight) {
   font-size: 14px;
   font-weight: $weight;
   line-height: 15.4px;
+  letter-spacing: -0.02em;
 }
 
 @mixin Base-12($weight) {
   font-size: 12px;
   font-weight: $weight;
   line-height: 18px;
+  letter-spacing: -0.02em;
 }
 
 @mixin Base-11($weight) {
   font-size: 11px;
   font-weight: $weight;
   line-height: 15.4px;
+  letter-spacing: -0.02em;
 }
 
 @mixin Base-10($weight) {
   font-size: 10px;
   font-weight: $weight;
   line-height: 14px;
+  letter-spacing: -0.02em;
 }
