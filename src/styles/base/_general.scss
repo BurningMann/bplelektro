@@ -165,6 +165,11 @@ i {
       margin-bottom: 10px;
     }
   }
+
+  a {
+    color: var(--primary-orange);
+    text-decoration: underline;
+  }
 }
 
 .breadcrumbs {
@@ -411,10 +416,6 @@ h6,
 
   @media screen and (max-width: $lg) {
     @include Sub-24(500);
-  }
-
-  @media screen and (max-width: $sm) {
-    @include Sub-20(500);
   }
 }
 
@@ -709,7 +710,7 @@ h6,
 }
 
 .form-section__fields {
-  height: 116px;
+  /*   height: 116px; */
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, 1fr);
@@ -718,7 +719,7 @@ h6,
   @media screen and (max-width: $sm) {
     grid-template-columns: repeat(1, 1fr);
     gap: 4px;
-    height: auto;
+    /*  height: auto; */
   }
 }
 
@@ -788,6 +789,17 @@ h6,
 
 .text-section-w-sidebar-img__img {
   border-radius: 4px;
+}
+
+.text-section-w-sidebar-img__date {
+  margin-bottom: 50px;
+  color: var(--grey-60);
+
+  @include Base-14(400);
+
+  @media screen and (max-width: $sm) {
+    margin-bottom: 20px;
+  }
 }
 
 .person-section {
@@ -886,6 +898,12 @@ h6,
   color: var(--grey-80);
 
   @include Base-16(400);
+}
+
+.public-offert {
+  color: #000;
+
+  @include Base-14(400);
 }
 
 /* .tabs {
