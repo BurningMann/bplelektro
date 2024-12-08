@@ -1,0 +1,167 @@
+.comparison-list-remove {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.comparison-list-remove {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--grey-60);
+
+  @include Base-14(400);
+}
+
+.comparison-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid var(--grey-40);
+  padding-top: 16px;
+}
+
+.comparison-list-item {
+  display: flex;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--grey-40);
+}
+
+.comparison-list-item__title {
+  width: 100%;
+
+  @include Base-16(400);
+}
+
+.comparison-list-item__right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.comparison-list-item__counter {
+  border-radius: 44px;
+  background: var(--primary-orange);
+  padding: 4px 8px;
+  height: 18px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+
+  @include Base-12(400);
+}
+
+.comparison-list-item__dell {
+  cursor: pointer;
+}
+
+.comparison-table {
+  width: max-content;
+}
+
+.comparison-table__wr {
+  overflow: auto;
+}
+
+.comparison-table__row {
+  display: flex;
+
+  &:first-child {
+    padding-bottom: 20px;
+  }
+
+  &:not(:first-child) {
+    height: 52px;
+
+    .comparison-table__col {
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--grey-20);
+
+      @include Base-14(400);
+    }
+  }
+
+  &.is-title {
+    background: var(--grey-20);
+  }
+}
+
+.comparison-table__col {
+  width: 228px;
+}
+
+.comparison-table__differences-btn-wr {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.comparison-table__differences-btn {
+  display: flex;
+
+  .checkbox-input__check {
+    background: var(--grey-20);
+  }
+
+  .checkbox-input__placeholder {
+    color: var(--black);
+
+    @include Base-14(400);
+  }
+}
+
+.comparison-table-card {
+  padding: 8px;
+  position: relative;
+
+  .catalog-card__cart-button {
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  .catalog-card__availability-text {
+    @include Base-12(400);
+  }
+
+  .catalog-card__availability-counter {
+    @include Base-10(400);
+  }
+}
+
+.comparison-table-card__dell {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.comparison-table-card__img-wr {
+  width: 100%;
+  height: 170px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparison-table-card__title {
+  margin-bottom: 10px;
+
+  @include Base-12(400);
+}
+
+.comparison-table-card__prize {
+  @include Base-16(400);
+}
+
+.comparison-table-card__prize-dop {
+  color: var(--grey-60);
+
+  @include Base-12(400);
+}
+
+.comparison-table__row-title {
+  @include Base-16(400);
+}

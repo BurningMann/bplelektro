@@ -142,6 +142,10 @@ i {
   margin: 0 auto;
 }
 
+.content-container-large {
+  max-width: 1035px;
+}
+
 .page {
   padding-top: var(--header-height);
   min-height: 100vh;
@@ -153,7 +157,8 @@ i {
   }
 }
 
-[data-popup] {
+[data-popup],
+[data-anchor] {
   cursor: pointer;
 }
 
@@ -996,6 +1001,12 @@ h6,
   }
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .accordion-item {
   &__button {
     flex-shrink: 0;
@@ -1023,11 +1034,15 @@ h6,
 
   &__header {
     background: var(--grey-20);
-    padding: 20px 100px 20px 24px;
     border-radius: 4px;
+    padding: 27px 100px 27px 36px;
 
     @media screen and (max-width: $sm) {
-      padding: 10px 50px 10px 10px;
+      padding: 20px 50px 20px 10px;
+    }
+
+    &-text {
+      @include Sub-24(400);
     }
 
     &.is-active {
@@ -1041,6 +1056,15 @@ h6,
       border-left: 2px solid var(--grey-20);
       border-right: 2px solid var(--grey-20);
       border-bottom: 2px solid var(--grey-20);
+
+      p a {
+        color: var(--primary-orange);
+        transition: 0.2s;
+
+        &:hover {
+          color: var(--primary-gren);
+        }
+      }
     }
   }
 }

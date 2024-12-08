@@ -5,8 +5,14 @@
 }
 
 .vacancy-list__item-header {
+  padding: 20px 100px 20px 24px;
+
   @media screen and (min-width: $md) {
     height: 130px;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding: 10px 50px 10px 10px;
   }
 }
 

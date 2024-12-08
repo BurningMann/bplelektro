@@ -1,6 +1,7 @@
 const header = document.querySelector('.header');
 const menuBurger = document.querySelector('.header-burger');
 const burgerMenu = document.querySelector('.burger-menu');
+const search = document.querySelector('.header-search');
 
 menuBurger.addEventListener('click', () => {
   if (menuBurger.classList.contains('is-active')) {
