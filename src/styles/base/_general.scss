@@ -1024,11 +1024,9 @@ h6,
     }
 
     @media screen and (max-width: $sm) {
-      width: 30px;
-      height: 30px;
-      top: 10px;
-      right: 10px;
-      transform: none;
+      width: 20px;
+      height: 20px;
+      right: 16px;
     }
   }
 
@@ -1043,6 +1041,10 @@ h6,
 
     &-text {
       @include Sub-24(400);
+
+      @media screen and (max-width: $sm) {
+        @include Sub-18(400);
+      }
     }
 
     &.is-active {
@@ -1057,6 +1059,10 @@ h6,
       border-right: 2px solid var(--grey-20);
       border-bottom: 2px solid var(--grey-20);
 
+      @media screen and (max-width: $sm) {
+        padding: 12px;
+      }
+
       p a {
         color: var(--primary-orange);
         transition: 0.2s;
@@ -1067,4 +1073,41 @@ h6,
       }
     }
   }
+}
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  &:not(.is-scroll) {
+    .scroll-shadow {
+      display: none;
+    }
+  }
+}
+
+.scroll-container__content {
+  overflow: auto;
+}
+
+.scroll-shadow {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 20px;
+  height: 100%;
+}
+
+.scroll-shadow--top {
+  left: 0;
+  background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.35), transparent);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent);
+  opacity: 0;
+}
+
+.scroll-shadow--bottom {
+  right: 0;
+  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.35), transparent);
 }

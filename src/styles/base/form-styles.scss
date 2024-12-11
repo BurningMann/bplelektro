@@ -1,5 +1,6 @@
 .form-input {
   position: relative;
+  display: block;
 
   &__placeholder {
     position: absolute;
@@ -54,6 +55,10 @@
   border-radius: 4px;
 
   @include Base-14(400);
+
+  &.is-large {
+    height: 42px;
+  }
 
   &.is-error {
     border-color: var(--red);
@@ -410,4 +415,17 @@
 .custom-select-option.is-selected,
 .custom-select-option:hover {
   background-color: LightBlue;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
 }

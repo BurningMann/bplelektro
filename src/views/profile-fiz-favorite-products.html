@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include("../blocks/modules/head/head.html")
+  <body>
+    @@include("../blocks/modules/header/header.html")
+    <main class="page">
+      <div class="container">
+        @@include("../blocks/modules/breadcrumbs/index.html")
+        <h1 class="h1 page-title">Избранные товары</h1>
+        <div class="profile-page">
+          <div class="profile-page__sidebar">
+            <div class="profile-sidebar-menu">
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Личные данные</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Оформленные заказы</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Отложенные заказы</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Шаблоны заказов</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link is-active">
+                <span>Избранные товары</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Бонусная программа</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+            </div>
+            @@include("../blocks/modules/profile/profile-sidebar-bonus.html")
+          </div>
+          <div class="profile-page__main">
+            <section class="page-section">
+              <div class="profile-products-grid">
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+
+                <div class="products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+              </div>
+            </section>
+            <section class="page-section">
+              <div class="page-section__title h6">Популярные товары</div>
+              <div class="profile-products-grid">
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+                <div class="profile-products-grid__item">@@include("../blocks/modules/catalogCard/index.html")</div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../blocks/modules/footer/footer.html") @@include("../blocks/modules/scripts/scripts.html")
+  </body>
+</html>

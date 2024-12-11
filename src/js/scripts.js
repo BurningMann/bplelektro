@@ -309,6 +309,43 @@ anchorButtons.forEach((el) => {
   });
 });
 
+const addAdressBtn = document.querySelectorAll('.profile-page__add-delivery-adress');
+addAdressBtn.forEach((el) => {
+  const hiddenBlock = document.querySelector('.profile-page__fields-box.hidden');
+
+  if (!hiddenBlock) {
+    return;
+  }
+
+  el.addEventListener('click', () => {
+    hiddenBlock.classList.remove('hidden');
+    el.remove();
+  });
+});
+
+const hasHorizontalScrollbar = (element) => element.scrollWidth > element.clientWidth;
+
+const orderTableWr = document.querySelectorAll('.scroll-container');
+orderTableWr.forEach((el) => {
+  const content = el.querySelector('.scroll-container__content');
+
+  if (!hasHorizontalScrollbar(content)) {
+    return;
+  }
+
+  el.classList.add('is-scroll');
+
+  const contentScrollHeight = content.scrollWidth - el.offsetWidth;
+  const shadowTop = el.querySelector('.scroll-shadow--top');
+  const shadowBottom = el.querySelector('.scroll-shadow--bottom');
+
+  content.addEventListener('scroll', function () {
+    var currentScroll = this.scrollLeft / contentScrollHeight;
+    shadowTop.style.opacity = currentScroll;
+    shadowBottom.style.opacity = 1 - currentScroll;
+  });
+});
+
 import './import/modules';
 import './import/components';
 import './components/sliders';

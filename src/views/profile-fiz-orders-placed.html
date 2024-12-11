@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include("../blocks/modules/head/head.html")
+  <body>
+    @@include("../blocks/modules/header/header.html")
+    <main class="page">
+      <div class="container">
+        @@include("../blocks/modules/breadcrumbs/index.html")
+        <h1 class="h1 page-title">Оформленные заказы</h1>
+        <div class="profile-page">
+          <div class="profile-page__sidebar">
+            <div class="profile-sidebar-menu">
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Личные данные</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link is-active">
+                <span>Оформленные заказы</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Отложенные заказы</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Шаблоны заказов</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Избранные товары</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Бонусная программа</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+            </div>
+            @@include("../blocks/modules/profile/profile-sidebar-bonus.html")
+          </div>
+          <div class="profile-page__main">
+            <div class="scroll-container">
+              <div class="scroll-shadow scroll-shadow--top"></div>
+              <div class="scroll-shadow scroll-shadow--bottom"></div>
+              <div class="scroll-container__content orders-table-wr">
+                <table class="orders-table">
+                  <thead>
+                    <tr>
+                      <td width="100">
+                        <span class="orders-table__col-title">
+                          Номер <br />
+                          заказа
+                        </span>
+                      </td>
+                      <td width="120">
+                        <span class="orders-table__col-title"> Дата <br />заказа </span>
+                      </td>
+                      <td width="130">
+                        <span class="orders-table__col-title"> Статаус <br />заказа </span>
+                      </td>
+                      <td width="130">
+                        <span class="orders-table__col-title"> Товаров <br />в заказе </span>
+                      </td>
+                      <td class="price-col">
+                        <span class="orders-table__col-title"> Сумма <br />заказа </span>
+                      </td>
+                      <td width="160">
+                        <span class="orders-table__col-title"> Начислено <br />бонусов </span>
+                      </td>
+                      <td width="160">
+                        <span class="orders-table__col-title"> Списано <br />бонусов </span>
+                      </td>
+                      <td width="100"></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="is-gray-text">1562345</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text"> 05.05.2024 </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__status is-formalized">Оформлен</span>
+                      </td>
+                      <td>
+                        <span class="is-gray-text">12</span>
+                      </td>
+                      <td>
+                        <span> 246.44 руб. </span>
+                      </td>
+                      <td>
+                        <span class="orders-table__bonus">+ 2 бонуса</span>
+                      </td>
+                      <td>
+                        <span>- 2 бонуса</span>
+                      </td>
+                      <td>
+                        <div class="button is-ghost is-tiny">Подробнее</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="catalog-pagination">
+              <a href="#" class="catalog-pagination__arrow netbook-hidden">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.667 8H4.00033M7.33366 4L3.80506 7.5286C3.54471 7.78894 3.54471 8.21106 3.80506 8.4714L7.33366 12"
+                    stroke="#C0C0C0"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                Предыдущая страница
+              </a>
+              <div class="catalog-pagination__buttons">
+                <a href="#" class="catalog-pagination__button"> 1 </a>
+                <a href="#" class="catalog-pagination__button is-active"> 2 </a>
+                <a href="#" class="catalog-pagination__button"> 3 </a>
+                <a href="#" class="catalog-pagination__button"> 4 </a>
+                <div class="catalog-pagination__button is-empty">...</div>
+                <a href="#" class="catalog-pagination__button"> 23 </a>
+              </div>
+              <a href="#" class="catalog-pagination__arrow netbook-hidden">
+                Следующая страница
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.33301 8H11.9997M8.66634 4L12.1949 7.5286C12.4553 7.78894 12.4553 8.21106 12.1949 8.4714L8.66634 12"
+                    stroke="#C0C0C0"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../blocks/modules/footer/footer.html") @@include("../blocks/modules/scripts/scripts.html")
+  </body>
+</html>
