@@ -6,15 +6,15 @@
   right: 0;
   height: 100lvh;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10vh 2rem 4rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10vh 20px 40px;
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
 
   @media screen and (max-width: $lg) {
-    padding: 5vh 2rem 10vh;
+    padding: 5vh 10px 10vh;
   }
 
   &.is-active {
@@ -25,55 +25,62 @@
   &__wrapper {
     position: relative;
     width: 100%;
-    max-width: 80rem;
+    max-width: 700px;
     margin: 0 auto;
-    background: #ffffff;
+    background: var(--white);
     overflow: hidden;
-    padding: 4rem;
+    padding: 42px;
+    border: 2px solid var(--grey-40);
+    border-radius: 4px;
 
     @media screen and (max-width: $lg) {
-      padding: 4rem 2rem 4rem;
+      padding: 40px 20px;
     }
   }
 
   &__close {
     position: absolute;
-    top: 2rem;
-    right: 4rem;
+    top: 16px;
+    right: 16px;
     z-index: 50;
     cursor: pointer;
 
     @media screen and (max-width: $lg) {
-      top: 1rem;
-      right: 1rem;
-    }
-
-    svg {
-      width: 1.7rem;
-      height: 1.7rem;
+      top: 0px;
+      right: 0px;
     }
   }
 
   &__content-heading {
-    margin-bottom: 8rem;
+    margin-bottom: 42px;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 42px;
 
     @media screen and (max-width: $lg) {
-      margin-bottom: 2rem;
-      gap: 2rem;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    @include Sub-24(400);
+
+    @media screen and (max-width: $sm) {
+      @include Sub-20(400);
     }
   }
 
   &__subtitle {
-    font-size: 2rem;
-    line-height: 175%;
-    max-width: 60rem;
+    max-width: 500px;
     margin: 0 auto;
 
+    @include Sub-18(400);
+
     @media screen and (max-width: $lg) {
-      font-size: 1.2rem;
+      @include Base-16(400);
     }
   }
 
@@ -82,18 +89,23 @@
   }
 
   &__form-container {
+    max-width: 455px;
+    margin: 0 auto;
   }
 
   &.success_popup {
-    .popup__wrapper {
+    /*     .popup__wrapper {
       padding: 4rem 2rem;
       max-width: 40rem;
       min-height: 10rem;
-    }
+    } */
   }
 }
 
 .success-popup-message {
-  font-size: 2rem;
+  color: var(--grey-80);
   text-align: center;
+  max-width: 360px;
+
+  @include Sub-24(400);
 }

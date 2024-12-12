@@ -1,0 +1,243 @@
+.order-card {
+}
+
+.order-card__top {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--grey-80);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.order-card__top-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.order-card__top-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.order-card__date,
+.order-card__status {
+  color: var(--grey-80);
+
+  @include Base-14(400);
+}
+
+.order-card__top-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary-green);
+  cursor: pointer;
+  height: 28px;
+  padding: 0 6px;
+  transition: 0.2s;
+
+  @include Base-14(400);
+
+  &.is-dell {
+    color: var(--grey-60);
+  }
+
+  &.is-order {
+    background: var(--grey-20);
+  }
+
+  &:hover {
+    color: var(--primary-orange);
+  }
+}
+
+.order-card__products-list {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-bottom: 1px solid var(--grey-80);
+  margin-bottom: 32px;
+}
+
+.order-car-product {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--grey-20);
+  }
+}
+
+.order-car-product__img {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.order-car-product__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+
+  @media screen and (max-width: $md) {
+    flex-wrap: wrap;
+  }
+}
+
+.order-car-product__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 355px;
+}
+
+.order-car-product__articul {
+  @include Base-11(400);
+}
+
+.order-car-product__articul-label {
+  color: var(--grey-60);
+}
+
+.order-car-product__name {
+  @include Base-12(400);
+}
+
+.order-car-product__counter {
+  color: var(--grey-80);
+  flex-shrink: 0;
+
+  @include Base-14(400);
+
+  @media screen and (max-width: $md) {
+    width: calc(50% - 20px);
+  }
+}
+
+.order-car-product__price {
+  flex-shrink: 0;
+
+  @include Base-14(400);
+
+  @media screen and (max-width: $md) {
+    width: calc(50% - 20px);
+    text-align: right;
+  }
+}
+
+.order-card__total-wr {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--grey-80);
+}
+
+.order-card__total {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 454px;
+  width: 100%;
+  margin: 0 0 0 auto;
+
+  @media screen and (max-width: $md) {
+    max-width: 100%;
+  }
+}
+
+.order-card__total-pay {
+  width: max-content;
+  margin: 0 0 50px auto;
+
+  @media screen and (max-width: $md) {
+    width: 100%;
+    margin: 0 0 0 auto;
+  }
+}
+
+.order-card__total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.is-sum {
+    padding-top: 24px;
+    border-top: 1px solid var(--grey-20);
+  }
+}
+
+.order-card__total-row-label {
+  color: var(--grey-80);
+
+  @include Base-14(400);
+
+  .is-sum & {
+    color: var(--black);
+
+    @include Sub-24(400);
+
+    @media screen and (max-width: $md) {
+      @include Sub-20(400);
+    }
+  }
+}
+
+.order-card__total-row-value {
+  @include Base-14(400);
+
+  .is-sum & {
+    @include Sub-24(400);
+
+    @media screen and (max-width: $md) {
+      @include Sub-20(400);
+    }
+  }
+}
+
+.order-card__contact {
+  padding-top: 24px;
+}
+
+.order-card__contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  padding-right: 45px;
+  border-bottom: 1px solid var(--grey-20);
+
+  @media screen and (max-width: $md) {
+    padding-right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.order-card__contact-row-label {
+  @include Sub-18(400);
+}
+
+.order-card__contact-row-value {
+  color: var(--grey-80);
+  width: 290px;
+
+  @include Base-16(400);
+
+  @media screen and (max-width: $md) {
+    width: auto;
+  }
+}

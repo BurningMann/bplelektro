@@ -189,7 +189,7 @@ document.addEventListener('mouseup', (e) => {
       code: '+375',
       iso: 'BY',
       flag: 'https://cdn.kcak11.com/CountryFlags/countries/by.svg',
-      mask: '(##)###-##-##',
+      mask: ' (##) ###-##-##',
     },
   ];
 

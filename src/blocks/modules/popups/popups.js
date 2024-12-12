@@ -32,13 +32,19 @@ document.addEventListener('click', (e) => {
 });
 
 let toastTimeout = null;
-window.activateSuccessPopup = (text, delay) => {
+window.activateSuccessPopup = (title = 'Спасибо', text, delay) => {
   const popup = document.querySelector('.success_popup');
   if (!popup) return false;
 
+  const toastTitle = popup.querySelector('.success-popup-title');
   const toastText = popup.querySelector('.success-popup-message');
+  toastTitle.toastTitle = title;
   toastText.innerHTML = text;
   popup.classList.add('is-active');
+
+  if (!delay) {
+    return false;
+  }
 
   clearTimeout(toastTimeout);
   toastTimeout = setTimeout(() => {

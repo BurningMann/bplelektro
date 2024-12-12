@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include("../blocks/modules/head/head.html")
+  <body>
+    @@include("../blocks/modules/header/header.html")
+    <main class="page">
+      <div class="container">
+        @@include("../blocks/modules/breadcrumbs/index.html")
+        <h1 class="h1 page-title">Отложенные заказы</h1>
+        <div class="profile-page">
+          <div class="profile-page__sidebar">
+            <div class="profile-sidebar-menu">
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Личные данные</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Оформленные заказы</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link is-active">
+                <span>Отложенные заказы</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Шаблоны заказов</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Избранные товары</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+              <a href="#" class="profile-sidebar-menu__link">
+                <span>Помощь</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#6A6A6A" />
+                </svg>
+              </a>
+            </div>
+            @@include("../blocks/modules/profile/profile-sidebar-manager.html")
+          </div>
+          <div class="profile-page__main">
+            <div class="scroll-container">
+              <div class="scroll-shadow scroll-shadow--top"></div>
+              <div class="scroll-shadow scroll-shadow--bottom"></div>
+              <div class="scroll-container__content orders-table-wr">
+                <table class="orders-table">
+                  <thead>
+                    <tr>
+                      <td width="100">
+                        <span class="orders-table__col-title">
+                          Номер <br />
+                          заказа
+                        </span>
+                      </td>
+                      <td width="120">
+                        <span class="orders-table__col-title"> Дата <br />заказа </span>
+                      </td>
+                      <td width="130">
+                        <span class="orders-table__col-title"> Статаус <br />заказа </span>
+                      </td>
+                      <td width="130">
+                        <span class="orders-table__col-title"> Товаров <br />в заказе </span>
+                      </td>
+                      <td class="price-col">
+                        <span class="orders-table__col-title">
+                          Сумма <br />
+                          заказа без НДС
+                        </span>
+                      </td>
+                      <td class="price-col">
+                        <span class="orders-table__col-title">
+                          Сумма <br />
+                          заказа с НДС
+                        </span>
+                      </td>
+                      <td width="140"></td>
+                      <td width="26"></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="100%" class="orders-table__empty">Здесь пока ничего нет</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include("../blocks/modules/footer/footer.html") @@include("../blocks/modules/scripts/scripts.html")
+  </body>
+</html>

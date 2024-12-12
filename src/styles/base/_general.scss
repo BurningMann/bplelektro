@@ -273,6 +273,22 @@ i {
   color: var(--grey-80);
 }
 
+.is-white-text {
+  color: var(--white);
+}
+
+.is-black-text {
+  color: var(--balck);
+}
+
+.is-orange-text {
+  color: var(--primary-orange);
+}
+
+.is-green-text {
+  color: var(--primary-green);
+}
+
 .base-16 {
   @include Base-16(400);
 
