@@ -116,6 +116,10 @@ ul {
   }
 }
 
+ol {
+  list-style-position: inside;
+}
+
 i {
   font-style: italic;
 }
@@ -278,7 +282,7 @@ i {
 }
 
 .is-black-text {
-  color: var(--balck);
+  color: var(--black);
 }
 
 .is-orange-text {
@@ -927,40 +931,83 @@ h6,
   @include Base-14(400);
 }
 
-/* .tabs {
+.editor-content {
+  color: var(--grey-80);
+
+  @include Base-16(400);
+
+  strong,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--black);
+  }
+
+  ul,
+  ol {
+    padding-left: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-top: 1px solid var(--grey-20);
+
+    tr {
+      border-bottom: 1px solid var(--grey-20);
+    }
+
+    td {
+      padding: 10px 0;
+    }
+  }
+
+  iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.tabs {
   width: 100%;
   overflow: hidden;
 
   &__header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 20px;
+    min-width: max-content;
   }
 
   &__button {
-    font-size: 1.2rem;
     cursor: pointer;
-    transition: 0.3s;
     flex-shrink: 0;
-    color: var(--grey40);
-    font-weight: 700;
-    line-height: 140%;
-    letter-spacing: 0.02em;
+    color: var(--grey-60);
+    border-bottom: 1px dashed var(--grey-60);
+    flex-shrink: 0;
+
+    @include Sub-18(400);
 
     &.is-active {
-      color: var(--black);
+      color: var(--primary-orange);
+      border-color: transparent;
     }
   }
 
   &__content-box {
     display: none;
+    margin-top: 30px;
 
     &.is-active {
       display: block;
     }
   }
-} */
+}
 
 /* .swiper-scrollbar {
   background: none;
@@ -1126,4 +1173,45 @@ h6,
   right: 0;
   background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent);
   background: linear-gradient(270deg, rgba(0, 0, 0, 0.35), transparent);
+}
+
+.table-owerflow {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .table-owerflow {
+    overflow: auto;
+  }
+}
+
+.video-slider {
+  width: 100%;
+  position: relative;
+
+  .swiper-slide {
+    width: 340px;
+  }
+
+  .swiper-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.8);
+    height: 100%;
+    border-radius: 0;
+    backdrop-filter: blur(10px);
+  }
+}
+
+.video-slider-card__img {
+  border-radius: 4px;
+  overflow: hidden;
+  height: 190px;
+  margin-bottom: 12px;
+}
+
+.video-slider-card__title {
+  @include Sub-18(400);
 }

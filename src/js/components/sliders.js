@@ -124,3 +124,42 @@ reviewSlider.forEach((el) => {
     },
   });
 });
+
+const productSLiderContainer = document.querySelectorAll('.product-page-slider');
+productSLiderContainer.forEach((el) => {
+  const objectSLider = el.querySelector('.product-page-slider__main .swiper');
+  const objectSLiderThumb = el.querySelector('.product-page-slider__thumbs .swiper');
+
+  const swiperThumb = new Swiper(objectSLiderThumb, {
+    slidesPerView: '4',
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      prevEl: el.querySelector('.swiper-arrow.is-prev'),
+      nextEl: el.querySelector('.swiper-arrow.is-next'),
+    },
+  });
+
+  const swiper = new Swiper(objectSLider, {
+    slidesPerView: '1',
+    loop: true,
+    thumbs: {
+      swiper: swiperThumb,
+    },
+  });
+});
+
+const videoSlider = document.querySelectorAll('.video-slider');
+videoSlider.forEach((el) => {
+  const slider = el.querySelector('.swiper');
+  const swiper = new Swiper(slider, {
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 700,
+    spaceBetween: 10,
+    navigation: {
+      prevEl: el.querySelector('.swiper-arrow.is-prev'),
+      nextEl: el.querySelector('.swiper-arrow.is-next'),
+    },
+  });
+});
