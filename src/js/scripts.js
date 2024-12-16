@@ -274,7 +274,40 @@ document.addEventListener('mouseup', (e) => {
 
 /* Catalog card */
 const catalogCards = document.querySelectorAll('.catalog-card');
-catalogCards.forEach((el) => {});
+catalogCards.forEach((el) => {
+  const availability = el.querySelectorAll('.catalog-card__availability');
+  const availabilityContent = el.querySelector('.catalog-card__availability-content-wrapper');
+
+  if (!availabilityContent) {
+    return false;
+  }
+
+  const isMobile = window.innerWidth <= 576;
+
+  availability.forEach((el2) => {
+    tippy(el2, {
+      content: availabilityContent.innerHTML,
+      allowHTML: true,
+      interactive: !isMobile,
+      appendTo: () => document.body,
+      theme: 'light-border',
+      maxWidth: 'none',
+      trigger: isMobile ? 'click' : 'mouseenter focus',
+      onShow() {
+        if (!isMobile) {
+          return;
+        }
+        window.hideScrollBar();
+      },
+      onHide() {
+        if (!isMobile) {
+          return;
+        }
+        window.showScrollBar();
+      },
+    });
+  });
+});
 
 const topCartBtns = document.querySelectorAll('.catalog-card__top-btn');
 

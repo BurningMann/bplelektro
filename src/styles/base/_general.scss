@@ -340,6 +340,7 @@ i {
 
 .page-section__title {
   margin-bottom: 40px;
+  user-select: none;
 
   @media screen and (max-width: $sm) {
     margin-bottom: 20px;
@@ -538,6 +539,14 @@ h6,
     display: flex;
     width: max-content;
   }
+
+  &.is-white-hover {
+    &:hover {
+      color: var(--balck);
+      background: var(--white);
+      border-color: var(--white);
+    }
+  }
 }
 
 .slider-w-side-arrows {
@@ -637,6 +646,7 @@ h6,
   position: relative;
   border-radius: 4px;
   overflow: hidden;
+  user-select: none;
 
   @media screen and (max-width: $sm) {
     height: auto;

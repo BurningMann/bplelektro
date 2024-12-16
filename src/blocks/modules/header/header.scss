@@ -515,3 +515,68 @@
     background: var(--primary-orange);
   }
 }
+
+.header-main__nav-button-profile {
+  position: relative;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  background: var(--white);
+  border: 1px solid var(--grey-40);
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+
+  .header-main__nav-button-profile:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.profile-dropdown__box {
+  border-bottom: 1px solid var(--grey-40);
+  padding: 12px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.profile-dropdown__name {
+  margin-bottom: 12px;
+
+  @include Sub-20(400);
+}
+
+.profile-dropdown__organization {
+  color: var(--grey-80);
+
+  @include Base-14(400);
+
+  span {
+    color: var(--grey-60);
+  }
+}
+
+.profile-dropdown__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-dropdown__contact {
+  @include Base-14(400);
+}
+
+.profile-dropdown__contact-label {
+  color: var(--grey-60);
+  margin-bottom: 3px;
+}
+
+.profile-dropdown__exit {
+  color: var(--grey-60);
+}
