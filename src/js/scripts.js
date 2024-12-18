@@ -19,6 +19,12 @@ Fancybox.bind('[data-fancybox]', {
 
 tippy('[data-tippy-content]');
 
+window.addEventListener('dblclick', (event) => {
+  event.stopPropagation();
+  event.preventDefault();
+  console.log(event);
+});
+
 /* Accordion */
 
 function accordionOpen(header, content) {
@@ -181,13 +187,14 @@ selects.forEach((element) => {
       }
       activeItem.classList.remove('is-selected');
       el.classList.add('is-selected');
+      element.classList.remove('is-open');
     });
   });
 });
 
 document.addEventListener('mouseup', (e) => {
   if (!e.target.closest('.custom-select')) {
-    const openSelects = document.querySelectorAll('.custom-select-dropdown.is-open');
+    const openSelects = document.querySelectorAll('.custom-select.is-open');
     openSelects.forEach((select) => {
       select.classList.remove('is-open');
     });
@@ -309,7 +316,9 @@ catalogCards.forEach((el) => {
   });
 });
 
-const topCartBtns = document.querySelectorAll('.catalog-card__top-btn');
+const topCartBtns = document.querySelectorAll(
+  '.catalog-card__top-btn, .product-page-info-order-item__cart, .assortment-item__cart'
+);
 
 topCartBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -424,6 +433,37 @@ contentTables.forEach((el) => {
 
   el.parentNode.insertBefore(wrapper, el);
   el.remove();
+});
+
+const assortmentItemBtn = document.querySelectorAll('.assortment-item__more');
+assortmentItemBtn.forEach((el) => {
+  el.addEventListener('click', () => {
+    const parrent = el.closest('.assortment-item');
+    const id = parrent.dataset.productId;
+    const childProducts = document.querySelectorAll(`.assortment-item-list.parrent-product-${id}`);
+
+    parrent.classList.toggle('is-active');
+    childProducts.forEach((item) => {
+      item.classList.toggle('is-visible');
+    });
+  });
+});
+
+const learnAboutEnrollmentBtns = document.querySelectorAll('[data-learn-about-enrollment-product-name]');
+
+learnAboutEnrollmentBtns.forEach((el) => {
+  el.addEventListener('click', () => {
+    const data = el.dataset.learnAboutEnrollmentProductName;
+    const target = document.getElementById('learn-about-enrollment_popup-name');
+    const targetTitle = document.getElementById('learn-about-enrollment_popup-name-title');
+
+    console.log(target);
+    if (!data || !target) {
+      return;
+    }
+    targetTitle.innerHTML = data;
+    target.value = data;
+  });
 });
 
 import './import/modules';

@@ -3,10 +3,18 @@
   margin-bottom: 40px;
   border-radius: 4px;
   overflow: hidden;
+  position: relative;
 
   @media screen and (max-width: $sm) {
     margin-bottom: 20px;
   }
+}
+
+.contacts-map-section__map-button {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, 0);
 }
 
 .contacts-map-section__info {
@@ -152,7 +160,7 @@
 .team-card {
   border: 1px solid var(--grey-40);
   border-radius: 4px;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   width: 222px;
   height: 352px;
   display: flex;
@@ -172,7 +180,7 @@
 .team-card__name {
   color: var(--primary-green);
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 
   @include Base-16(400);
 }
@@ -186,12 +194,47 @@
 
 .team-card__phone-wr {
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.team-card__phone-dop {
+  padding-left: 4px;
+  border-left: 1px solid var(--grey-40);
+  display: flex;
+  align-items: center;
+
+  @include Base-12(400);
 }
 
 .team-card__phone {
   text-align: center;
 
+  @include Base-12(400);
+}
+
+.team-card__main-phone {
+  text-align: center;
+
+  @include Base-14(600);
+}
+
+.team-card__main-phone-2 {
+  text-align: center;
+
   @include Base-14(400);
+}
+
+.team-card__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card__phone-box {
+  display: flex;
+  flex-direction: column;
+  padding-right: 8px;
 }
 
 .team-card__email-wr {
@@ -200,6 +243,7 @@
 
 .team-card__email {
   text-align: center;
+  text-decoration: underline;
 
   @include Base-12(400);
 }

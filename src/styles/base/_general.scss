@@ -18,6 +18,8 @@
   --font-family: "Roboto Flex", serif;
 
   --mobile-bottom-bar-height: 50px;
+  --catalog-sidebar-width: 338px;
+  --catalog-sidebar-gap: 88px;
 }
 
 @media screen and (max-width: $lg) {
@@ -31,6 +33,7 @@
 
 * {
   scroll-margin-top: var(--header-height);
+  user-select: none;
 }
 
 body,
@@ -259,6 +262,7 @@ i {
   color: var(--primary-green);
   gap: 8px;
   flex-shrink: 0;
+  user-select: none;
 
   @include Base-14(400);
 
@@ -271,6 +275,10 @@ i {
       stroke: currentColor;
     }
   }
+}
+
+.is-text-center {
+  text-align: center;
 }
 
 .is-gray-text {
@@ -457,6 +465,7 @@ h6,
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
+  user-select: none;
 
   @include Base-16(400);
 
@@ -525,6 +534,11 @@ h6,
       background: var(--primary-orange);
       border-color: var(--primary-orange);
     }
+  }
+
+  &.is-disabled {
+    background: var(--grey-60);
+    color: var(--white);
   }
 
   &.is-tiny {

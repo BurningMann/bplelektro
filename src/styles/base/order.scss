@@ -74,6 +74,12 @@
     margin-bottom: 16px;
     border-bottom: 1px solid var(--grey-20);
   }
+
+  &:hover {
+    .order-car-product__name {
+      color: var(--primary-orange);
+    }
+  }
 }
 
 .order-car-product__img {
@@ -114,6 +120,8 @@
 }
 
 .order-car-product__name {
+  transition: 0.2s;
+
   @include Base-12(400);
 }
 

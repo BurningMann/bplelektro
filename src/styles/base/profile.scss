@@ -1,7 +1,7 @@
 .profile-page {
   display: grid;
   grid-template-columns: 222px 1fr;
-  gap: 40px;
+  gap: 100px;
 
   @media screen and (max-width: $md) {
     grid-template-columns: 1fr;

@@ -153,7 +153,7 @@
 
   <div class="catalog-card__price-line-wr">
     <div class="catalog-card__price-line">
-      <span class="catalog-card__price">129.05 руб</span>
+      <span class="catalog-card__price">--.-- руб</span>
       <span class="catalog-card__price-additional">за шт.</span>
       <span class="catalog-card__price-additional">без НДС</span>
       <div class="catalog-card__top-btns">
@@ -196,33 +196,14 @@
   </div>
 
   <div class="catalog-card__cart-section">
-    <div class="catalog-card__counter">
-      <div class="catalog-card__counter-button is-minus">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M8.79995 6.40001H3.19995V5.60001H8.79995V6.40001Z"
-            fill="#2E2E2E"
-          />
-        </svg>
-      </div>
-      <div class="catalog-card__counter-input">
-        <input type="number" value="1" />
-      </div>
-      <div class="catalog-card__counter-button is-plus">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M5.59995 5.6V3.2H6.39995V5.6H8.79995V6.4H6.39995V8.8H5.59995V6.4H3.19995V5.6H5.59995Z"
-            fill="#2E2E2E"
-          />
-        </svg>
-      </div>
-    </div>
-    <button type="button" class="catalog-card__cart-button button is-primary is-tiny">
-      <span class="catalog-card__cart-button-text mobile-hidden">В корзину</span>
+    <button
+      type="button"
+      class="catalog-card__cart-button button is-tiny is-disabled is-white-hover"
+      data-popup="learn-about-enrollment"
+      data-learn-about-enrollment-product-name="ARMAT Автоматический выключатель M06N 1P C 10А IEK Автоматический выключатель ARMAT Автоматический выключатель
+      M06N 1P C 10А IEK Автоматический выключатель"
+    >
+      <span class="catalog-card__cart-button-text mobile-hidden">Узнать о поступлении</span>
       <div class="atalog-card__cart-button-icon mobile-visible">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -247,21 +228,7 @@
   </div>
 
   <div class="catalog-card__footer">
-    <div class="catalog-card__availability">
-      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5ZM4.71453 7.14043L7.59364 3.54154L7.07306 3.12508L4.61883 6.19287L2.88008 4.74391L2.45329 5.25605L4.71453 7.14043Z"
-          fill="#114335"
-        />
-      </svg>
-      <div class="catalog-card__availability-text">На складах</div>
-      <div class="catalog-card__availability-counter">(58)</div>
-    </div>
-
-    <!-- Если нет в наличии -->
-    <!-- <div class="catalog-card__availability is-out">
+    <div class="catalog-card__availability is-out">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -272,31 +239,6 @@
       </svg>
 
       <div class="catalog-card__availability-text">Нет в наличии</div>
-    </div> -->
-  </div>
-
-  <div class="catalog-card__availability-content-wrapper">
-    <div class="catalog-card__availability-content">
-      <div class="catalog-card__availability-content-title">
-        Доступное количество:
-        <div class="mobile-visible">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M27 9L9 27M27 27L9 9.00002" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" />
-          </svg>
-        </div>
-      </div>
-      <div class="catalog-card__availability-content-row">
-        <div>Лида</div>
-        <div>102</div>
-      </div>
-      <div class="catalog-card__availability-content-row">
-        <div>Лида Огородники</div>
-        <div>10</div>
-      </div>
-      <div class="catalog-card__availability-content-row">
-        <div>Склад поставщика (4-10 дней)</div>
-        <div>600</div>
-      </div>
     </div>
   </div>
 </div>
