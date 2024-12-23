@@ -56,10 +56,7 @@
 
   @media screen and (max-width: $lg) {
     grid-template-columns: 1fr;
-  }
-
-  @media screen and (max-width: $sm) {
-    height: 300px;
+    height: auto;
   }
 }
 
@@ -71,7 +68,11 @@
   overflow: hidden;
 
   @media screen and (max-width: $lg) {
-    display: none;
+    grid-template-rows: repeat(2, 200px);
+  }
+
+  @media screen and (max-width: $sm) {
+    grid-template-rows: repeat(2, 120px);
   }
 }
 
@@ -105,6 +106,14 @@
   position: relative;
   border-radius: 4px;
   overflow: hidden;
+
+  @media screen and (max-width: $lg) {
+    height: 460px;
+  }
+
+  @media screen and (max-width: $sm) {
+    height: 300px;
+  }
 
   .swiper {
     height: 100%;

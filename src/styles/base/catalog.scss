@@ -12,9 +12,7 @@
 }
 
 .catalog-card__price-line .catalog-card__top-btns {
-  .catalog-grid:not(.is-list) & {
-    display: none !important;
-  }
+  display: none;
 }
 
 .catalog-card__top {
@@ -111,6 +109,19 @@
   }
 }
 
+.catalog-card__tags-2 {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  display: flex;
+  gap: 4px;
+  z-index: 5;
+
+  span {
+    text-align: center;
+  }
+}
+
 .catalog-card__bonuses {
   position: absolute;
   right: 8px;
@@ -161,6 +172,12 @@
   color: var(--grey-60);
 
   @include Base-12(400);
+
+  &.is-vat {
+    @media screen and (max-width: $sm) {
+      @include Base-10(400);
+    }
+  }
 }
 
 .catalog-card__cart-section {
@@ -276,6 +293,10 @@
   border-radius: 4px;
   overflow: hidden;
   max-height: 420px;
+
+  @media screen and (max-width: $md) {
+    max-height: 100%;
+  }
 }
 
 .catalog-pagination {
@@ -283,6 +304,7 @@
   align-items: center;
   justify-content: center;
   gap: 110px;
+  margin-top: 40px;
 }
 
 .catalog-pagination__arrow {
@@ -431,6 +453,12 @@
   @media screen and (max-width: $xl) {
     width: 100%;
   }
+
+  @media screen and (max-width: $md) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
 }
 
 .catalog-page__sort-label {
@@ -566,6 +594,17 @@
       min-height: 88px;
       border-radius: 0;
 
+      &.is-out {
+        .catalog-card__cart-section {
+          justify-content: center;
+        }
+
+        .catalog-card__cart-button-text {
+          @include Base-11(400);
+          line-height: 10px;
+        }
+      }
+
       @media screen and (max-width: $md) {
         padding-left: 100px;
         flex-direction: column;
@@ -600,7 +639,8 @@
       margin: 0 20px 0 0;
 
       .catalog-card__tags,
-      .catalog-card__bonuses {
+      .catalog-card__bonuses,
+      .catalog-card__tags-2 {
         display: none;
       }
 
@@ -628,7 +668,12 @@
       gap: 12px;
       margin-bottom: 8px;
 
-      .catalog-card__tags {
+      @media screen and (max-width: $sm) {
+        align-items: flex-end;
+      }
+
+      .catalog-card__tags,
+      .catalog-card__tags-2 {
         position: unset;
         flex-direction: row;
       }
@@ -699,6 +744,7 @@
 
       .catalog-card__top-btns {
         padding-left: 50px;
+        display: flex;
 
         @media screen and (max-width: $md) {
           padding: 0;

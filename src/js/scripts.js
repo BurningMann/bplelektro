@@ -179,6 +179,10 @@ selects.forEach((element) => {
 
       const value = el.dataset.value;
 
+      if (!value) {
+        element.classList.remove('is-open');
+      }
+
       mainValue.value = value;
       const activeItem = element.querySelector('.custom-select-option.is-selected');
 
@@ -441,11 +445,18 @@ assortmentItemBtn.forEach((el) => {
     const parrent = el.closest('.assortment-item');
     const id = parrent.dataset.productId;
     const childProducts = document.querySelectorAll(`.assortment-item-list.parrent-product-${id}`);
+    const text = document.querySelector(`.assortment-item__more-text`);
 
     parrent.classList.toggle('is-active');
     childProducts.forEach((item) => {
       item.classList.toggle('is-visible');
     });
+
+    if (parrent.classList.contains('is-active')) {
+      text.innerHTML = 'Свернуть';
+    } else {
+      text.innerHTML = 'Все товары';
+    }
   });
 });
 

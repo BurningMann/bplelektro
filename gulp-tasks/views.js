@@ -27,3 +27,16 @@ gulp.task('views', () => {
       .pipe(browsersync.stream())
   );
 });
+
+gulp.task('fileinclude', function () {
+  gulp
+    .src(paths.views.src)
+    .pipe(
+      fileinclude({
+        prefix: '@@',
+        basepath: '@file',
+      })
+    )
+    .pipe(gulp.dest(paths.views.dist))
+    .pipe(browsersync.stream());
+});

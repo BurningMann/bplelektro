@@ -2,15 +2,17 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
-}
-
-.comparison-list-remove {
   display: flex;
   align-items: center;
   gap: 8px;
   color: var(--grey-60);
 
   @include Base-14(400);
+
+  svg {
+    position: relative;
+    top: -1px;
+  }
 }
 
 .comparison-list {

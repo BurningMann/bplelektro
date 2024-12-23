@@ -61,7 +61,7 @@
     border-right: 1px solid var(--grey-20);
 
     @media screen and (max-width: $lg) {
-      border-radius: none;
+      border-right: none;
       border-bottom: 1px solid var(--grey-20);
       padding-bottom: 20px;
     }
@@ -99,9 +99,11 @@
 }
 
 .contact-section__box-value {
-  height: 70px;
-
   @include Base-16(400);
+
+  @media screen and (min-width: $sm) {
+    height: 70px;
+  }
 }
 
 .team-section__anchors {

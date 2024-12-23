@@ -42,7 +42,7 @@ const productsSlider = document.querySelectorAll('.product-slider');
 productsSlider.forEach((el) => {
   const slider = el.querySelector('.swiper');
   const swiper = new Swiper(slider, {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 10,
     navigation: {
       prevEl: el.querySelector('.swiper-arrow.is-prev'),
