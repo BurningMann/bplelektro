@@ -483,6 +483,11 @@
     @include Base-12(500);
     border: none;
   }
+
+  td {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
 }
 
 .assortment-item__more {

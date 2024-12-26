@@ -321,7 +321,7 @@ catalogCards.forEach((el) => {
 });
 
 const topCartBtns = document.querySelectorAll(
-  '.catalog-card__top-btn, .product-page-info-order-item__cart, .assortment-item__cart'
+  '.catalog-card__top-btn, .product-page-info-order-item__cart, .assortment-item__cart, .order-card-product__top-btn'
 );
 
 topCartBtns.forEach((btn) => {

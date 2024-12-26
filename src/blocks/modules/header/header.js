@@ -2,11 +2,11 @@ const header = document.querySelector('.header');
 const menuBurger = document.querySelector('.header-burger');
 const burgerMenu = document.querySelector('.burger-menu');
 const search = document.querySelector('.header-search');
-const catalogBtn = document.querySelectorAll('.header-catalog-btn');
+const catalogBtn = document.querySelectorAll('.js-catalog-btn');
 const catalog = document.querySelector('.catalog-menu-wrapper');
 
 menuBurger.addEventListener('click', () => {
-  if (menuBurger.classList.contains('is-active')) {
+  if (menuBurger.classList.contains('is-active') || catalog.classList.contains('is-active')) {
     window.showScrollBar();
     menuBurger.classList.remove('is-active');
     burgerMenu.classList.remove('is-active');
