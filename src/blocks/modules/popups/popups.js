@@ -4,12 +4,7 @@ popupButtons.forEach((el) => {
   el.addEventListener('click', (e) => {
     e.preventDefault();
     const popupSlug = el.dataset.popup;
-
-    const popup = document.querySelector(`.${popupSlug}_popup`);
-    if (popup) {
-      popup.classList.add('is-active');
-      window.hideScrollBar();
-    }
+    window.openDialog(popupSlug);
   });
 });
 
@@ -53,4 +48,14 @@ window.activateSuccessPopup = (title = 'Спасибо', text, delay) => {
       toastText.innerHTML = '';
     }, 300);
   }, delay);
+};
+
+window.openDialog = (target) => {
+  const popup = document.querySelector(`.${target}_popup`);
+  if (!popup) {
+    return;
+  }
+
+  popup.classList.add('is-active');
+  window.hideScrollBar();
 };

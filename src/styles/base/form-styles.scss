@@ -213,9 +213,25 @@
       transition: 0.3s;
     }
 
-    .is-alternate-collor & {
+    .is-alternate-collor &,
+    .is-cart & {
       background: var(--grey-20);
     }
+  }
+
+  &__button {
+    height: 34px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 30px;
+    background: var(--grey-20);
+    color: var(--grey-80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    @include Base-12(400);
   }
 
   /* &__radio {
@@ -253,6 +269,16 @@
     .is-alternate-collor & {
       color: var(--grey-80);
     }
+
+    .is-cart & {
+      color: var(--black);
+
+      @include Base-14(400);
+
+      .checkbox-input__placeholder-subtext {
+        @include Base-12(400);
+      }
+    }
   }
 
   input {
@@ -262,6 +288,11 @@
       .checkbox-input__check-icon {
         transform: scale(1) rotate(0);
       }
+    }
+
+    &:checked + .checkbox-input__button {
+      background: var(--primary-green);
+      color: var(--white);
     }
 
     /* &:checked + .checkbox-input__radio {
@@ -486,17 +517,22 @@
   padding: 0.5em;
   cursor: pointer;
   color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
   @include Base-14(400);
+
+  &[data-value] {
+    &.is-selected,
+    &.custom-select-option:hover {
+      background-color: var(--primary-orange);
+      color: var(--white);
+    }
+  }
 }
 
-.custom-select-option.is-selected,
-.custom-select-option:hover {
-  background-color: var(--primary-orange);
-  color: var(--white);
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
+.custom-select-option input[type="date"]::-webkit-calendar-picker-indicator {
   background: transparent;
   bottom: 0;
   color: transparent;

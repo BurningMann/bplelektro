@@ -1,0 +1,375 @@
+.cart-page {
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  gap: 40px;
+
+  @media screen and (max-width: $lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cart-page__main {
+  overflow: hidden;
+
+  .cart-table__top {
+    position: relative;
+
+    @media screen and (max-width: $sm) {
+      .cart-table__top-left {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .custom-select.mobile-visible {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+.cart-page-final {
+  @media screen and (min-width: $lg) {
+    padding-left: 24px;
+    border-left: 2px solid var(--black);
+    position: sticky;
+    top: calc(var(--header-height) + 20px);
+  }
+}
+
+.cart-page-final__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 2px dashed var(--grey-60);
+
+  @media screen and (max-width: $lg) {
+    border-bottom: 1px dashed var(--grey-60);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.cart-page-final__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-page-final__row-label,
+.cart-page-final__row-value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  @include Base-14(400);
+
+  sup {
+    @include Base-14(400);
+    color: var(--grey-60);
+  }
+
+  &.is-total {
+    @include Sub-24(400);
+  }
+}
+
+.cart-page-final__total {
+  margin-bottom: 24px;
+}
+
+.cart-page-final__button {
+  width: 100%;
+}
+
+.cart-table__top {
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cart-table__top-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.cart-table__top-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.cart-table__top-select-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include Base-12(400);
+}
+
+.cart-table__top-product-info {
+  display: flex;
+  gap: 6px;
+
+  span {
+    color: var(--grey-80);
+  }
+}
+
+.cart-table__top-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary-green);
+  cursor: pointer;
+  height: 28px;
+  padding: 0 6px;
+  transition: 0.2s;
+
+  @include Base-14(400);
+
+  &.is-dell {
+    color: var(--grey-60);
+    justify-content: flex-end;
+  }
+
+  &.is-order {
+    background: var(--grey-20);
+  }
+
+  &:hover {
+    color: var(--primary-orange);
+  }
+}
+
+.cart-table-wr {
+  border: 1px solid var(--primary-green);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 100px;
+
+  @media screen and (max-width: $lg) {
+    margin-bottom: 32px;
+  }
+
+  .order-card__table thead tr {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+}
+
+.cart-ordering {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 920px;
+
+  @media screen and (max-width: $md) {
+    gap: 30px;
+  }
+
+  .auth-bar {
+    margin-bottom: 0;
+  }
+}
+
+.cart-ordering__section {
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--grey-20);
+    padding-bottom: 60px;
+
+    @media screen and (max-width: $md) {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.cart-ordering__section-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: $md) {
+    margin-bottom: 24px;
+  }
+}
+
+.cart-ordering__section-title-number {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--grey-40);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include Sub-20(400);
+}
+
+.cart-ordering__fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.cart-delivery {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media screen and (max-width: $md) {
+    gap: 16px;
+  }
+}
+
+.cart-delivery__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--grey-20);
+    padding-bottom: 32px;
+
+    @media screen and (max-width: $md) {
+      padding-bottom: 16px;
+    }
+  }
+
+  @media screen and (max-width: $md) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.cart-delivery__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.delivery-info-section:not(.is-active) {
+  display: none;
+}
+
+.cart-delivery__pickup-description-text {
+  color: var(--grey-80);
+
+  @include Base-12(400);
+}
+
+.cart-delivery__pickup-description-contacts {
+  @include Base-14(400);
+}
+
+.cart-delivery__delivery-company {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.cart-delivery__adress-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  .form-input {
+    &:nth-child(1),
+    &:nth-child(2) {
+      grid-column: 1 / 4;
+    }
+  }
+}
+
+.cart-delivery__free-delivery {
+  @include Base-14(400);
+}
+
+.cart-delivery__adress-select {
+  margin-bottom: 24px;
+
+  .custom-select-opener,
+  .custom-select-option {
+    height: 42px;
+  }
+
+  .custom-select-dropdown {
+    position: unset;
+  }
+
+  &.custom-select:not(.is-open) {
+    .custom-select-dropdown {
+      display: none;
+    }
+  }
+}
+
+.cart-delivery__save-adress {
+  margin-top: 27px;
+}
+
+.cart-payment__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-page__commentary {
+  .file-input__name {
+    color: var(--primary-green);
+  }
+
+  .file-input__plus path {
+    stroke: var(--primary-green);
+  }
+
+  .file-input {
+    padding: 20px 0;
+  }
+}
+
+.cart-page__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 16px;
+
+  @media screen and (max-width: $lg) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .checkbox-input__placeholder {
+    max-width: 300px;
+  }
+}
+
+.cart-page__footer-button {
+  width: 300px;
+
+  @media screen and (max-width: $md) {
+    width: 100%;
+  }
+}
+
+.cart-page__buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media screen and (max-width: $md) {
+    flex-direction: column-reverse;
+  }
+}

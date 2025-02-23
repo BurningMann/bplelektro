@@ -676,6 +676,12 @@
       .catalog-card__bonuses {
         position: unset;
       }
+
+      .catalog-card__tags {
+        @media screen and (min-width: $md) {
+          position: unset;
+        }
+      }
     }
 
     .catalog-card__title {

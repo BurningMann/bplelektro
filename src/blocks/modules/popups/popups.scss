@@ -71,6 +71,10 @@
     @media screen and (max-width: $sm) {
       @include Sub-20(400);
     }
+
+    &.is-left {
+      text-align: left;
+    }
   }
 
   &__subtitle {
@@ -82,6 +86,10 @@
     @media screen and (max-width: $lg) {
       @include Base-16(400);
     }
+
+    &.is-left {
+      margin: 0;
+    }
   }
 
   &__content {
@@ -91,6 +99,14 @@
   &__form-container {
     max-width: 455px;
     margin: 0 auto;
+  }
+
+  &__footer {
+    margin-top: 60px;
+
+    @media screen and (max-width: $md) {
+      margin-top: 30px;
+    }
   }
 
   &.success_popup {

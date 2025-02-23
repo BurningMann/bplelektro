@@ -19,6 +19,14 @@ Fancybox.bind('[data-fancybox]', {
 
 tippy('[data-tippy-content]');
 
+document.querySelectorAll('[data-tippy-content]').forEach((el) => {
+  el.addEventListener('click', (event) => {
+    if (window.innerWidth <= 1024) {
+      event.preventDefault();
+    }
+  });
+});
+
 window.addEventListener('dblclick', (event) => {
   event.stopPropagation();
   event.preventDefault();
@@ -181,6 +189,8 @@ selects.forEach((element) => {
 
       if (!value) {
         element.classList.remove('is-open');
+
+        return;
       }
 
       mainValue.value = value;
@@ -476,6 +486,96 @@ learnAboutEnrollmentBtns.forEach((el) => {
     target.value = data;
   });
 });
+
+/* CART */
+(() => {
+  const deliveryInputs = document.querySelectorAll('.delivery-type__input');
+
+  const cleanAllSections = () => {
+    const section = document.querySelectorAll('.delivery-info-section');
+
+    section.forEach((el) => {
+      el.classList.remove('is-active');
+    });
+  };
+
+  const setActiveSection = (targetElement) => {
+    targetElement.classList.add('is-active');
+  };
+
+  deliveryInputs.forEach((el) => {
+    const target = el.dataset.section;
+    const targetElement = document.querySelector(`.${target}-info-data`);
+
+    if (el.checked && targetElement) {
+      setActiveSection(targetElement);
+    }
+
+    el.addEventListener('change', () => {
+      cleanAllSections();
+
+      if (!targetElement) {
+        return;
+      }
+
+      setActiveSection(targetElement);
+    });
+  });
+})();
+
+(() => {
+  const carttableSelectAll = document.querySelector('.cart-table__top-select-all input');
+  const cartProductsInputs = document.querySelectorAll('.order-card__table .order-card-product__check input');
+
+  const checkAll = () => {
+    cartProductsInputs.forEach((el) => {
+      el.checked = true;
+    });
+  };
+
+  const uncheckAll = () => {
+    cartProductsInputs.forEach((el) => {
+      el.checked = false;
+    });
+  };
+
+  const checkStatusAll = () => {
+    let counter = 0;
+    cartProductsInputs.forEach((el) => {
+      if (!el.checked) {
+        counter += 1;
+      }
+    });
+
+    if (counter > 0) {
+      carttableSelectAll.checked = false;
+
+      return;
+    }
+
+    carttableSelectAll.checked = true;
+  };
+
+  carttableSelectAll.addEventListener('change', () => {
+    if (carttableSelectAll.checked) {
+      checkAll();
+
+      return;
+    }
+
+    uncheckAll();
+  });
+
+  cartProductsInputs.forEach((el) => {
+    el.addEventListener('change', () => {
+      if (!el.checked) {
+        carttableSelectAll.checked = false;
+      }
+
+      checkStatusAll();
+    });
+  });
+})();
 
 import './import/modules';
 import './import/components';

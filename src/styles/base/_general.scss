@@ -121,6 +121,10 @@ ul {
 
 ol {
   list-style-position: inside;
+
+  li {
+    list-style-type: auto;
+  }
 }
 
 i {
@@ -289,6 +293,10 @@ i {
   }
 }
 
+.is-underline {
+  text-decoration: underline;
+}
+
 .is-text-center {
   text-align: center;
 }
@@ -313,6 +321,14 @@ i {
   color: var(--primary-green) !important;
 }
 
+.base-14 {
+  @include Base-14(400);
+
+  @media screen and (max-width: $sm) {
+    @include Base-12(400);
+  }
+}
+
 .base-16 {
   @include Base-16(400);
 
@@ -326,6 +342,14 @@ i {
 
   @media screen and (max-width: $md) {
     @include Sub-18(400);
+  }
+}
+
+.sub-24 {
+  @include Sub-24(400);
+
+  @media screen and (max-width: $md) {
+    @include Sub-20(400);
   }
 }
 
@@ -495,6 +519,7 @@ h6,
   border: 1px solid transparent;
   border-radius: 4px;
   user-select: none;
+  background: none;
 
   @include Base-16(400);
 
@@ -1303,4 +1328,38 @@ h6,
 
 .video-slider-card__title {
   @include Sub-18(400);
+}
+
+.auth-bar {
+  width: 100%;
+  background: var(--primary-orange);
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 45px;
+
+  @media screen and (max-width: $md) {
+    margin-bottom: 32px;
+    background: var(--white);
+    border: 1px solid var(--grey-20);
+    padding: 12px;
+  }
+}
+
+.auth-bar__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-bar__text {
+  color: var(--white);
+
+  @include Sub-20(400);
+
+  @media screen and (max-width: $md) {
+    color: var(--black);
+    text-align: center;
+
+    @include Base-12(400);
+  }
 }
