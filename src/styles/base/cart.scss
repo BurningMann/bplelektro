@@ -69,6 +69,7 @@
   sup {
     @include Base-14(400);
     color: var(--grey-60);
+    margin-top: -0.6em;
   }
 
   &.is-total {

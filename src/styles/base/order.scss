@@ -296,6 +296,10 @@
       }
 
       &.order-card__table-total {
+        &.is-bordered {
+          border-bottom: 1px solid var(--primary-green);
+        }
+
         td {
           @include Sub-18(400);
 

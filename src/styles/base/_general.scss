@@ -627,6 +627,16 @@ h6,
       }
     }
   }
+
+  &.is-white-ghost-hover {
+    @media screen and (min-width: $md) {
+      &:hover {
+        color: var(--white);
+        background: transparent;
+        border-color: var(--white);
+      }
+    }
+  }
 }
 
 .slider-w-side-arrows {
@@ -1336,6 +1346,10 @@ h6,
   padding: 16px;
   border-radius: 4px;
   margin-bottom: 45px;
+
+  &.is-cart-page {
+    max-width: calc(100% - 350px);
+  }
 
   @media screen and (max-width: $md) {
     margin-bottom: 32px;
