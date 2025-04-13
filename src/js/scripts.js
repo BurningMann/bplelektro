@@ -556,15 +556,17 @@ learnAboutEnrollmentBtns.forEach((el) => {
     carttableSelectAll.checked = true;
   };
 
-  carttableSelectAll.addEventListener('change', () => {
-    if (carttableSelectAll.checked) {
-      checkAll();
+  if (carttableSelectAll) {
+    carttableSelectAll.addEventListener('change', () => {
+      if (carttableSelectAll.checked) {
+        checkAll();
 
-      return;
-    }
+        return;
+      }
 
-    uncheckAll();
-  });
+      uncheckAll();
+    });
+  }
 
   cartProductsInputs.forEach((el) => {
     el.addEventListener('change', () => {
@@ -575,6 +577,67 @@ learnAboutEnrollmentBtns.forEach((el) => {
       checkStatusAll();
     });
   });
+})();
+
+/* login forms */
+(() => {
+  const titles = {
+    autorization: 'Вход в личный кабинет',
+    registration: 'Регистрация в личном кабинете',
+    password: 'Восстановление пароля ',
+  };
+
+  const autorizationPopup = document.querySelector('.autorization_popup');
+  const autorizationPopupTitle = document.querySelector('.autorization_popup .popup__title');
+  const autorizationSwitchButtons = document.querySelectorAll('.login-stich-button');
+  const autorizationUserSwitchButtons = document.querySelectorAll('.registraion-form-user-switch__button');
+
+  console.log(autorizationSwitchButtons);
+
+  autorizationSwitchButtons.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const target = el.dataset.target;
+      switchFormType(target);
+    });
+  });
+
+  autorizationUserSwitchButtons.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const target = el.dataset.target;
+      switchFormUserType(target);
+    });
+  });
+
+  const switchFormType = (target) => {
+    autorizationPopupTitle.innerHTML = titles[target];
+    if (target === 'autorization') {
+      autorizationPopup.classList.remove('is-password');
+      autorizationPopup.classList.remove('is-registraion');
+      autorizationPopup.classList.add('is-autorization');
+    } else if (target === 'registration') {
+      autorizationPopup.classList.add('is-registraion');
+      autorizationPopup.classList.remove('is-autorization');
+      autorizationPopup.classList.remove('is-password');
+    } else if (target === 'password') {
+      autorizationPopup.classList.remove('is-registraion');
+      autorizationPopup.classList.remove('is-autorization');
+      autorizationPopup.classList.add('is-password');
+    }
+  };
+
+  const switchFormUserType = (target) => {
+    if (target === 'juridical') {
+      autorizationPopup.classList.remove('is-fiz');
+      autorizationPopup.classList.add('is-juridical');
+    } else {
+      autorizationPopup.classList.add('is-fiz');
+      autorizationPopup.classList.remove('is-juridical');
+    }
+  };
 })();
 
 import './import/modules';
