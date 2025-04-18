@@ -340,7 +340,7 @@ topCartBtns.forEach((btn) => {
   });
 });
 
-const cardCounter = document.querySelectorAll('.catalog-card__counter');
+const cardCounter = document.querySelectorAll('.catalog-card__counter:not(.is-cart)');
 
 cardCounter.forEach((btn) => {
   const minusBtn = btn.querySelector('.catalog-card__counter-button.is-minus');
