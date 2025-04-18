@@ -39,6 +39,11 @@
   display: flex;
   align-items: center;
   gap: 4px;
+
+  button {
+    border: none;
+    background: none;
+  }
 }
 
 .catalog-card__top-btn {
