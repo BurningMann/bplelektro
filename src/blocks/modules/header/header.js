@@ -4,6 +4,7 @@ const burgerMenu = document.querySelector('.burger-menu');
 const search = document.querySelector('.header-search');
 const catalogBtn = document.querySelectorAll('.js-catalog-btn');
 const catalog = document.querySelector('.catalog-menu-wrapper');
+const catalogMenu = document.querySelector('.catalog-menu');
 
 menuBurger.addEventListener('click', () => {
   if (menuBurger.classList.contains('is-active') || catalog.classList.contains('is-active')) {
@@ -36,24 +37,25 @@ catalogBtn.forEach((el) => {
 
 const catalogMenuItems = document.querySelectorAll('.catalog-menu-item');
 catalogMenuItems.forEach((el) => {
+  const header = el.querySelector('.catalog-menu-item__header');
+
+  if (!header || el.classList.contains('is-link') || window.innerWidth <= 1024) {
+    return;
+  }
+
   el.addEventListener('click', () => {
-    if (el.classList.contains('is-link') || window.innerWidth <= 1024) {
-      return;
-    }
-
-    const header = el.querySelector('.catalog-menu-item__header');
-
-    if (!header) {
-      return;
-    }
-
     const openElement = document.querySelector('.catalog-menu-item.is-active');
+    
     if (openElement) {
       openElement.classList.remove('is-active');
     }
 
     el.classList.add('is-active');
   });
+
+  header.addEventListener('click', () => {
+    catalogMenu.scrollTop = 0;
+  })
 });
 
 const headerSearchInput = document.querySelector('.header-search__input');
