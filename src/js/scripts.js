@@ -640,6 +640,51 @@ learnAboutEnrollmentBtns.forEach((el) => {
   };
 })();
 
+(() => {
+  const filterBtn = document.querySelector('.catalog-page-fileter-btn')
+  const filterSidebar = document.querySelector('.catalog-page__sidebar')
+  const sortBtn = document.querySelector('.mobile-sort-button')
+  const sort = document.querySelector('.catalog-page__sort--first')
+  const bhBg = document.querySelector('.bottom-sheet-bg')
+  const bhClose = document.querySelectorAll('.js-bh-close')
+
+  if (!filterBtn || !filterSidebar) return false
+
+  filterBtn.addEventListener('click', () => {
+    window.hideScrollBar()
+    filterSidebar.classList.toggle('is-active')
+    bhBg.classList.toggle('is-active')
+  })
+
+  sortBtn.addEventListener('click', () => {
+    window.hideScrollBar()
+    sort.classList.toggle('is-active')
+    bhBg.classList.toggle('is-active')
+  })
+
+  const closeBh = () => {
+    const element = document.querySelector('.js-mobile-bh.is-active')
+
+    bhBg.classList.remove('is-active');
+    element.classList.remove('is-active');
+    window.showScrollBar()
+  }
+
+  document.addEventListener('mouseup', (e) => {
+    if (e.target?.classList?.contains('js-bh-close')) {
+      closeBh()
+    }
+  });
+
+  bhClose.forEach((el) => {
+    const hammertime = new Hammer(el, {});
+    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    hammertime.on('swipedown', function() {
+      closeBh()
+    });
+  })
+})();
+
 import './import/modules';
 import './import/components';
 import './components/sliders';

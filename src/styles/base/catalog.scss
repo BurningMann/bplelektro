@@ -369,8 +369,30 @@
     grid-template-columns: 1fr;
 
     .catalog-page__sidebar {
-      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 600;
+      background: #fff;
+      height: 70vh;
+      transition: .2s;
+      transform: translate(0, 100%);
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+  
+      &.is-active {
+        transform: translate(0, 0);
+      }
     }
+  }
+}
+
+.catalog-page__sidebar-wr {
+  @media screen and (max-width: $md) {
+    overflow: auto;
+    padding: 0 13px 20px;
+    height: calc(100% - 44px);
   }
 }
 
@@ -383,6 +405,41 @@
         display: none;
       }
     }
+  }
+}
+
+.catalog-page__sidebar-bh-close {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: var(--primary-green);
+    border-radius: 2px;
+  }
+}
+
+.bottom-sheet-bg {
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -455,25 +512,53 @@
 }
 
 .catalog-page__sort--first {
-  @media screen and (max-width: $xl) {
+  @media screen and (max-width: $md) {
     width: 100%;
   }
 
   @media screen and (max-width: $md) {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
+    z-index: 600;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    align-items: flex-start;
+    padding: 0 13px 20px;
+    border-radius: 10px 10px 0 0;
+    gap: 10px;
+    transition: .2s;
+    transform: translate(0, 100%);
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+    &.is-active {
+      transform: translate(0, 0);
+    }
   }
 }
 
 .catalog-page__sort-label {
   @include Base-14(400);
+
+  @media screen and (max-width: $md) {
+    @include Base-16(400);
+  }
 }
 
 .catalog-page__sort-buttons {
   display: flex;
   align-items: center;
   gap: 2px;
+
+  @media screen and (max-width: $md) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 .catalog-page__sort-button {
@@ -487,6 +572,10 @@
   transition: 0.2s;
 
   @include Base-14(400);
+
+  @media screen and (max-width: $md) {
+    @include Base-16(400);
+  }
 
   &.is-active {
     background: var(--primary-green);
@@ -533,6 +622,16 @@
   @media screen and (max-width: $xl) {
     flex-wrap: wrap;
   }
+}
+
+.catalog-page__top-row-right {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.mobile-sort-button {
+  cursor: pointer;
 }
 
 .catalog-page__top-tags {
