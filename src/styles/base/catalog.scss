@@ -511,8 +511,15 @@
   }
 }
 
-.catalog-page__sort--first {
+.catalog-page__sort--second {
   @media screen and (max-width: $md) {
+    width: 100%;
+    order: 5;
+  }
+}
+
+.catalog-page__sort--first {
+  @media screen and (max-width: $lg) {
     width: 100%;
   }
 
