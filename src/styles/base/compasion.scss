@@ -151,7 +151,12 @@
 
 .comparison-table-card__title {
   margin-bottom: 10px;
-
+  height: 50px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  
   @include Base-12(400);
 }
 

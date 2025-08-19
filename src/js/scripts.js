@@ -131,6 +131,10 @@ function accordionClose(header, content) {
 })();
 
 (() => {
+  function deleteCookie(name) {
+    document.cookie = `${name}=''; max-age=-1; expires=0; path=/;`;
+  }
+
   const catalogGrid = document.querySelector('.catalog-grid');
   const container = document.querySelector('.catalog-grid-type');
   if (!container) return false;
@@ -144,6 +148,7 @@ function accordionClose(header, content) {
       document.cookie = `catalog_grid_type=${type}; expires=0; path=/;`;
 
       if (type === 'grid') {
+        deleteCookie('catalog_grid_type')
         catalogGrid.classList.remove(`is-list`);
       } else {
         catalogGrid.classList.add(`is-list`);

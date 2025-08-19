@@ -271,7 +271,7 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 8px;
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: $xs) {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -680,7 +680,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: $xs) {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -728,6 +728,7 @@
       justify-content: space-between;
       width: 110px;
       margin: 0;
+      flex-shrink: 0;
 
       @media screen and (max-width: $md) {
         flex-direction: row;
@@ -841,6 +842,10 @@
       flex-direction: column;
       justify-content: space-between;
       margin: 0 auto;
+
+      @media screen and (min-width: $lg) {
+        flex-shrink: 0;
+      }
 
       @media screen and (max-width: $md) {
         margin: 0 0 10px;
