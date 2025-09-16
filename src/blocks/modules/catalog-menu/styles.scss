@@ -91,7 +91,9 @@
 .catalog-menu-item__header-name {
   color: var(--primary-green);
 
-  @include Base-11(400);
+  @include Base-14(400);
+
+  font-size: 13px;
 }
 
 .catalog-menu-item__header-icon-wr {
